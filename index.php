@@ -1,180 +1,236 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSG - Dream Bigger</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="navbar">
-        <img src="img/image 9.png" alt="logo psg">
-        <a href="">Menu</a>
-        <a href="">Pemain</a>
-        <a href="">Klub</a>
-        <a href="">Berita</a>
-        <a href="">Toko</a>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">
+      <img src="img/image 9.png" alt="PSG Logo">
     </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Pemain</a></li>
+        <li><a href="#">Klub</a></li>
+        <li><a href="#">Berita</a></li>
+      </ul>
+      <i class='bx bxs-user-circle'></i>
+    </nav>
+  </header>
 
-    <div>
-        <h1></h1>
-        <h2></h2>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <video width="100%" height="100%"  src="video/hero(1).mp4" autoplay loop muted></video>
+      <h1>Paris Saint Germain</h1>
+      <p>Dream Bigger</p>
     </div>
+  </section>
 
-    <div class="carousel">
-        <div class="card-news">
-            <img src="" alt="">
-            <h1></h1>
-        </div>
-        <div class="card-news">
-            <img src="" alt="">
-            <h1></h1>
-        </div>
-        <div class="card-news">
-            <img src="" alt="">
-            <h1></h1>
-        </div>
-        <div class="card-news">
-            <img src="" alt="">
-            <h1></h1>
-        </div>
-        <div class="card-news">
-            <img src="" alt="">
-            <h1></h1>
+  <!-- Berita Terbaru Section -->
+  <section class="berita">
+    <div class="berita-header">
+        <h2>Berita Terbaru</h2>
+        <div class="btn-carousel">
+            <button class="btn-kiri"> < </button>
+            <button class="btn-kanan"> > </button>
         </div>
     </div>
-   
-    <div class="container">
-        <div class="mvp">
-            <h1>MVP</h1>
-        </div>
-        <div class="pemain-mvp">
-            <div class="pemain">
-                <img src="" alt="">
-            </div>
-            <div class="pemain-text">
-                <h1></h1>
-                <p></p>
-            </div>
-        </div>
-    </div>
+    <div class="berita-container">
 
-    <div class="galeri-pemain">
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
+      <div class="card-berita">
+        <img src="img/psg1.jpg" alt="Berita 1">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
             </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
-            </div>
-        </div>
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
-            </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
+            <div class="card-berita-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
             </div>
         </div>
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
+      </div>
+
+      <div class="card-berita">
+        <img src="img/psg2.jpg" alt="Berita 2">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
             </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
-            </div>
-        </div>
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
-            </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
+            <div class="card-berita-desc">
+            <p>Tim Pertama | <span>1 Januari 2025</span></p>
             </div>
         </div>
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
+      </div>
+
+      <div class="card-berita">
+        <img src="img/psg3.jpg" alt="Berita 3">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
             </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
-            </div>
-        </div>
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
-            </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
+            <div class="card-berita-desc">
+            <p>Tim Pertama | <span>1 Januari 2025</span></p>
             </div>
         </div>
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
+      </div>
+
+      <div class="card-berita">
+        <img src="img/psg4.jpg" alt="Berita 4">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
             </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
-            </div>
-        </div>
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
-            </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
+            <div class="card-berita-desc">
+            <p>Tim Pertama | <span>1 Januari 2025</span></p>
             </div>
         </div>
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
+      </div>
+
+      <div class="card-berita">
+        <img src="img/psg5.jpg" alt="Berita 5">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
             </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
+            <div class="card-berita-desc">
+            <p>Tim Pertama | <span>1 Januari 2025</span></p>
             </div>
         </div>
-        <div class="card-pemain">
-            <div class="img">
-                <img src="" alt="">
+      </div>
+
+      <div class="card-berita">
+        <img src="img/psg6.jpg" alt="Berita 6">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
             </div>
-            <div class="card-text">
-                <h1></h1>
-                <p></p>
+            <div class="card-berita-desc">
+            <p>Tim Pertama | <span>1 Januari 2025</span></p>
             </div>
+        </div>
+      </div>
+
+      <div class="card-berita">
+        <img src="img/psg7.jpg" alt="Berita 7">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-berita-desc">
+            <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div>
+        </div>
+      </div>
+
+      <div class="card-berita">
+        <img src="img/psg8.jpg" alt="Berita 8">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-berita-desc">
+            <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div>
+        </div>
+      </div>
+
+      <div class="card-berita">
+        <img src="img/psg9.jpg" alt="Berita 9">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-berita-desc">
+            <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div>
+        </div>
+      </div>
+
+      <div class="card-berita">
+        <img src="img/psg10.jpg" alt="Berita 10">
+        <div class="card-berita-text">
+            <div class="card-berita-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-berita-desc">
+            <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MVP Section -->
+  <section class="mvp">
+    <div class="mvp-text">
+    <img src="img/Frame 79.png" alt="MVP Player">
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <h2 class="gallery-title">Galeri</h2>
+    <div class="gallery-container">
+        <div class="card-galery">
+            <img src="img/psg4.jpg" alt="galery 1">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-galery">
+            <img src="img/psg5.jpg" alt="galery 2">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-galery">
+            <img src="img/psg3.jpg" alt="galery 3">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-galery">
+            <img src="img/psg4.jpg" alt="galery 4">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-galery">
+            <img src="img/psg5.jpg" alt="galery 5">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-galery">
+            <img src="img/psg6.jpg" alt="galery 6">
+            <p>Klub PSG Menang</p> 
         </div>
     </div>
+  </section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="foot-text">
-                <h1></h1>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="foot-text">
-                <h1></h1>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="foot-text">
-                <h1></h1>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="foot-logo">
-                <img src="" alt="">
-            </div>
-        </div>
-    </footer>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>Paris Saint Germain</h3>
+        <ul>
+          <li><a href="#">Tim Pertama</a></li>
+          <li><a href="#">Tim Wanita</a></li>
+          <li><a href="#">Tentang Klub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Servis</h3>
+        <ul>
+          <li><a href="#">Akun</a></li>
+          <li><a href="#">Tiket</a></li>
+          <li><a href="#">Market</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tentang Kita</h3>
+      </div>
+    </div>
+    <div class="footer-logo">
+      <img src="img/image 9.png" alt="PSG Logo">
+    </div>
+  </footer>
 </body>
 </html>
