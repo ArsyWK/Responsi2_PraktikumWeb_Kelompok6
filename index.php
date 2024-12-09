@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PSG - Dream Bigger</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <!-- Header Section -->
   <header class="header">
     <div class="logo">
-      <img src="img/image 9.png" alt="PSG Logo">
+      <img class="logo-img" src="img/Logo-PSG.png" alt="PSG Logo">
     </div>
     <nav class="nav-menu">
       <ul>
@@ -176,7 +176,7 @@
 
   <!-- Gallery Section -->
   <section class="gallery">
-    <h2 class="gallery-title">Galeri</h2>
+    <h2 class="gallery-title">Gallery</h2>
     <div class="gallery-container">
         <div class="card-galery">
             <img src="img/psg4.jpg" alt="galery 1">
@@ -205,6 +205,36 @@
     </div>
   </section>
 
+  <section class="highlights">
+    <h2 class="highlights-title">Highlights</h2>
+    <div class="highlights-container">
+        <div class="card-highlights">
+            <img src="img/psg4.jpg" alt="highlights 1">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-highlights">
+            <img src="img/psg2.jpg" alt="highlights 2">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-highlights">
+            <img src="img/psg3.jpg" alt="highlights 3">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-highlights">
+            <img src="img/psg4.jpg" alt="highlights 4">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-highlights">
+            <img src="img/psg5.jpg" alt="highlights 5">
+            <p>Klub PSG Menang</p> 
+        </div>
+        <div class="card-highlights">
+            <img src="img/psg6.jpg" alt="highlights 6">
+            <p>Klub PSG Menang</p> 
+        </div>
+    </div>
+  </section>
+
   <!-- Footer Section -->
   <footer class="footer">
     <div class="footer-content">
@@ -225,7 +255,7 @@
         </ul>
       </div>
       <div>
-        <h3>Tentang Kita</h3>
+        <h3>Tentang Kami</h3>
       </div>
     </div>
     <div class="footer-logo">
