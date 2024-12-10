@@ -251,6 +251,7 @@
             </div>   
         </div>
 
+    
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
@@ -340,69 +341,60 @@
    
     <h2 class="position">Defender</h2>
 
-    <div class="player-container">
+    <div class="player-container">  
+    <div class="card-container">
+        <div class="card">
+            <div class="image-container">
+                <img src="img/pemain.png" alt="Player Image" class="player-image">
+                <div class="player-name-overlay">
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
+                    </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
                     <img src="img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
-                    Jonna P. Diddy
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
+                    </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
                     </div>
                 </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    Jonna P. Diddy
-                    </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    Jonna P. Diddy
-                    </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    Jonna P. Diddy
-                    </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    Jonna P. Diddy
-                    </div>
-                </div>
-            </div>   
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    Jonna P. Diddy
-                    </div>
                 </div>
             </div>   
         </div>
@@ -412,8 +404,25 @@
                 <div class="image-container">
                     <img src="img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
-                    Jonna P. Diddy
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
                     </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
                 </div>
             </div>   
         </div>
@@ -423,8 +432,25 @@
                 <div class="image-container">
                     <img src="img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
-                    Jonna P. Diddy
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
                     </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
                 </div>
             </div>   
         </div>
@@ -434,8 +460,52 @@
                 <div class="image-container">
                     <img src="img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
-                    Jonna P. Diddy
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
                     </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
+                </div>
+            </div>   
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="image-container">
+                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <div class="player-name-overlay">
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
+                    </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
                 </div>
             </div>   
         </div>
@@ -445,11 +515,113 @@
                 <div class="image-container">
                     <img src="img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
-                    Jonna P. Diddy
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
                     </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
                 </div>
             </div>   
         </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="image-container">
+                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <div class="player-name-overlay">
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
+                    </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
+                </div>
+            </div>   
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="image-container">
+                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <div class="player-name-overlay">
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
+                    </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
+                </div>
+            </div>   
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="image-container">
+                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <div class="player-name-overlay">
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
+                    </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
+                </div>
+            </div>   
+        </div>
+    </div>
     </div>
    
 
