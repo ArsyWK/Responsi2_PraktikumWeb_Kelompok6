@@ -95,7 +95,83 @@ nav i {
     left: 50%;
     font-weight: 500;
   }
-  
+
+  /* Bagian utama section */
+.mvp-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("img/sectionn.png"); /* Gambar latar belakang */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-mvp {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  width: 100%;
+}
+
+/* Bagian gambar pemain */
+.mvp-person img {
+  height: 100vh;
+  width: auto;
+  /* margin-right: 50px; */
+  border-radius: 10px;
+}
+
+/* Teks utama */
+.mvp-text {
+  color: white;
+  text-align: left;
+}
+
+.mvp-text .title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  text-align: left;
+}
+
+.mvp-text .player-name {
+  font-size: 3rem;
+  color: red;
+  margin-bottom: 20px;
+}
+
+/* Statistik */
+.mvp-stats {
+  display: flex;
+  gap: 200px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2rem;
+  margin: 0;
+  text-align: left;
+  width: 20px;
+}
+
+.stat-item p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5px 0;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  width: 60px;
+  margin-bottom: 30px;
+}
+
+
   /* Berita Section */
   .berita {
     padding: 20px;
@@ -109,22 +185,12 @@ nav i {
     gap: 20px;
   }
   
-  .card-berita{
-
-  }
-
-  .card-berita img {
-  }
-
-  .card-berita-text {
-
-  }
 
   .card-berita-title {
     color: red;
   }
   /* MVP Section */
-  .mvp {
+  /* .mvp {
     display: flex;
     align-items: center;
     background-color: #f9f9f9;
@@ -133,7 +199,7 @@ nav i {
   .mvp-text h2 {
     font-size: 32px;
     color: #333;
-  }
+  } */
   
   /* Gallery Section */
   .gallery {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biografi Pemain</title>
-    <link rel="stylesheet" href="bio.css">
+    <link rel="stylesheet" href="biopemain.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -25,13 +25,24 @@
     <div class="player-card">
             <img src="img/pemain.png" alt="Pemain" class="player-image">
             <div class="player-info">
+              <div class="position-stats">
                 <h2 class="position">Gelandang</h2>
-                <p class="stats">180/54</p>
-                <div class="details">
-                    <p>Nama : Osas</p>
-                    <p>Tanggal Lahir : 15 Desember 1998</p>
-                    <p>Asal : Prancis</p>
-                </div>
+                <h2 class="stats">180/54</h2>
+              </div>
+                <table class="details">
+                    <tr>
+                        <td>Nama</td>
+                        <td>: Osas</td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td>: 15 Desember 1998</td>
+                    </tr>
+                    <tr>
+                        <td>Asal</td>
+                        <td>: Prancis</td>
+                    </tr>
+                </table>
             </div>
     </div>
     </div>

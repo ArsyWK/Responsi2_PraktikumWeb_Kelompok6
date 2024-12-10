@@ -77,6 +77,9 @@ nav i {
     font-weight: bold;
     color: #fff;
   }
+  .container a:focus{
+    background-color: red;
+  }
 
   .artikel a {
     text-decoration: none;
@@ -109,6 +112,19 @@ nav i {
       margin: auto;
       margin-top: 30px;
 }
+
+    .Jadwal a {
+      text-decoration: none;
+      color: #000;
+}
+    .Jadwal a:focus {
+      text-decoration: underline;
+      color: #000;
+}
+
+    .Jadwal h1:focus{
+      text-decoration: underline;
+    }
     h1:hover{
     text-decoration: underline;
     cursor: pointer;

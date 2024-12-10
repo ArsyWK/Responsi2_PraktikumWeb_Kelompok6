@@ -141,6 +141,54 @@ h1:hover{
     color: black;
     margin: 0;
 }
+.psg-icon {
+  margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.picture img {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+.table-container {
+  /* border: 2px solid black; */
+  padding: 55px;
+  background-color:white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  /* border: 2px solid black; */
+}
+
+th, td {
+  border: 5px solid black;
+  padding: 60px;
+  font-weight: bold;
+}
+
+td {
+  padding: 30px;
+}
+
+thead th {
+  /* background-color: black; */
+  color: #000;
+}
+
+tbody td:first-child {
+  /* background-color: black; */
+  color: #000;
+}
 
    /* Footer */
    .footer {

@@ -10,7 +10,7 @@ body {
  /* Header */
  .header {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #fff;
@@ -55,7 +55,7 @@ nav i {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 80vh;
     background-color: #002244;
 }
 
@@ -68,8 +68,8 @@ nav i {
 
 .player-image {
     width: auto;
-    height: auto;
-    max-width: 300px;
+    height: 645px;
+    margin-right: 20px;
     margin-bottom: 20vh;
 }
 
@@ -83,17 +83,29 @@ nav i {
     text-align: left;
 }
 
+.position-stats{
+  display: flex;
+  gap: 200px;
+  text-align: center;
+
+}
+
 .position {
     color: red;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .stats {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
+    font-size: 30px;
+    color: red;
 }
 
+.details {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
  /* Footer */
  .footer {
     margin-top: 100px;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestasi Pemain</title>
-    <link rel="stylesheet" href="prestasipemain.css">
+    <link rel="stylesheet" href="prestasi.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -69,6 +69,51 @@
             <p class="label">PORSOED</p>
         </div>
     </div>   
+
+    <div class="picture">
+        <img class="psg-icon" src="img/image 20.png" alt="Psg Logo">
+    </div>
+    
+    <div class="table-container">
+    <table border="1"cellspacing="0">
+      <thead>
+        <tr>
+          <th>Tournament Perancis</th>
+          <th>8-0</th>
+          <th>8-0</th>
+          <th>8-0</th>
+          <th>8-0</th>
+          <th>8-0</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GBK</td>
+          <td>8-0</td>
+          <td>8-0</td>
+          <td>8-0</td>
+          <td>8-0</td>
+          <td>8-0</td>
+        </tr>
+        <tr>
+          <td>INFORMATICS ARMY</td>
+          <td>8-0</td>
+          <td>8-0</td>
+          <td>8-0</td>
+          <td>8-0</td>
+          <td>8-0</td>
+        </tr>
+        <tr>
+          <td>PORSOED</td>
+          <td>8-0</td>
+          <td>8-0</td>
+          <td>8-0</td>
+          <td>8-0</td>
+          <td>8-0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
     <!-- Footer Section -->

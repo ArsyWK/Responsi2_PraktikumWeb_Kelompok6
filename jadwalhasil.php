@@ -45,10 +45,10 @@
 
     <div class="Jadwal">
         <div>
-            <h1>Pertandingan Lalu</h1>
+            <a href="#"><h1>Pertandingan Lalu</h1></a>
         </div>
         <div>
-            <h1>Pertandingan Mendatang</h1>
+            <a href="#"><h1>Pertandingan Mendatang</h1></a>
         </div>
     </div>
 

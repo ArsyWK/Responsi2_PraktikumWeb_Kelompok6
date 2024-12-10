@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PSG - Dream Bigger</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styless.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -168,11 +168,34 @@
   </section>
 
   <!-- MVP Section -->
-  <section class="mvp">
-    <div class="mvp-text">
-    <img src="img/Frame 79.png" alt="MVP Player">
+  <section class="mvp-section">
+  <div class="container-mvp">
+    <!-- Bagian gambar pemain -->
+    <div class="mvp-person">
+      <img src="img/pemain.png" alt="Pemain MVP">
     </div>
-  </section>
+    
+    <!-- Bagian teks MVP -->
+    <div class="mvp-text">
+      <h1 class="title">MVP</h1>
+      <h2 class="player-name">Osas Zimbabwe</h2>
+      
+      <!-- Statistik -->
+      <div class="mvp-stats">
+        <div class="stat-item">
+          <h3>Gol</h3>
+          <p>20</p>
+          <h3>Pertandingan</h3>
+          <p>50</p>
+        </div>
+        <div class="stat-item">
+          <h3>Assist</h3>
+          <p>10</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Gallery Section -->
   <section class="gallery">
