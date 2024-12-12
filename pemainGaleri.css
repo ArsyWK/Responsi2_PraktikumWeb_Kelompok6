@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+ /* Header */
+ .header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+    width: 100%;
+}
+
+nav i {
+    color: #000;
+    font-size: 50px;
+}
+
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .nav-menu a:hover {
+    text-decoration: underline;
+    
+    
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-img{
+    width: auto;
+    height: 200px; 
+  }
+  .container{
+    display: flex;
+    width: 50%;
+    height: auto;
+    gap: 5px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .container a {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #000;
+    font-weight: bold;
+    color: #fff;
+  }
+  .artikel a {
+    text-decoration: none;
+    padding: 10px 20px 10px 40px;
+    background-color:#000;
+    color: white;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%); /* Membuat bentuk segiempat miring */
+    transition: 0.3s ease-in-out;
+}
+  .player a {
+    text-decoration: none;
+    padding: 10px 40px 10px 20px;
+    background-color:#000;
+    color: white;
+    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%); 
+    transform: scaleX(-1); /* Membuat clip path miring ke kanan */
+    transition: 0.3s ease-in-out;
+}
+ a:hover {
+    background-color: red; /* Ubah warna saat hover */
+    transform: scale(1.05); /* Efek pembesaran */
+}
+
+.galeri-pemain{
+    padding: 20px;
+    width: 100vh;
+    height: auto;
+
+}
+.galeri-pemain-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+    width: 100vw;
+    height: 100vh;
+    
+}
+.card-galeri-pemain-title{
+    color: red;
+}
+
+.card-galeri-pemain img{
+    width: 400px;
+    height: 300px;
+}

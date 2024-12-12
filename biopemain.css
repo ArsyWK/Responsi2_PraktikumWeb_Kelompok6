@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+ /* Header */
+ .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+    width: 100%;
+}
+
+nav i {
+    color: #000;
+    font-size: 50px;
+}
+
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .nav-menu a:hover {
+    text-decoration: underline;
+    
+    
+  }
+.view-player{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #002244;
+}
+
+.player-card {
+    display: flex;
+    align-items: center;
+    width: 80%;
+   
+}
+
+.player-image {
+    width: auto;
+    height: 645px;
+    margin-right: 20px;
+    margin-bottom: 20vh;
+}
+
+.player-info {
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-bottom: 10vh;
+    padding: 10px;
+    background-color: #002244;
+    color: white;
+    text-align: left;
+}
+
+.position-stats{
+  display: flex;
+  gap: 200px;
+  text-align: center;
+
+}
+
+.position {
+    color: red;
+    font-size: 30px;
+}
+
+.stats {
+    font-size: 30px;
+    color: red;
+}
+
+.details {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+ /* Footer */
+ .footer {
+    margin-top: 100px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+    height: 100px;
+  }
+
+ .logo-page{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 550px;
+  }
+  
