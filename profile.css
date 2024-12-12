@@ -6,20 +6,7 @@ body {
     padding: 0;
     box-sizing: border-box;
   }
-  
-  .logo-img{
-    width: auto;
-    height: 100px;
-  }
 
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-
-  }
-  
-  /* Header */
   .header {
     display: flex;
     /* justify-content: space-between; */
@@ -28,8 +15,15 @@ body {
     background-color: #fff;
     color: #000;
   }
-  
-nav{
+
+  .logo-img{
+    width: auto;
+    height: 100px;
+  }
+
+
+
+  nav{
     display: flex;
     justify-content: space-between;
 }
@@ -56,45 +50,57 @@ nav i {
     color: #000;
     font-size: 20px;
     font-weight: 600;
-  }
-  .nav-menu a:hover {
-    text-decoration: underline;
-    
-    
-  }
-  .news-title{
-    margin-top: 50px;
-    margin-left: 30px;
-  }
-  i{
-    margin-left: 40px;
-    color: #000;
-    font-size: 50px;
-    margin-bottom: 20px;
-  }
-.news-content{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 50px;
-    text-align: justify;
-    font-size: 15px;
 }
-span{
-    font-size: 25px;
+.nav-menu a:hover {
+    text-decoration: underline; 
+}
+
+.container{
+    display: flex;
+}
+
+.profile-container {
+  display: block;
+  width: 40%;
+  height: 50vh;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto;
+}
+
+  .setting-profile{
+    padding: 50px;
+    /* margin: 50px; */
+    
+  }
+  .setting-profile label{
+    /* padding: 20px; */
+    font-size: 20px;
     font-weight: 600;
+    color: #000;
     
-}
+  }
+  .setting-profile input{
+    width: 80%;
+  }
+
+  .button-container{
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+  }
 
 
+    .img-profile img{
+        width: 200px;
+        height: 200px;
+        padding: 50%;
+        margin-left: 60px;
+    }
 
-
-
-
-
-
-
-
-   /* Footer */
+    /* Footer */
  .footer {
     margin-top: 100px;
     background-color: #000;
