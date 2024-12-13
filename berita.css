@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .logo-img{
+    width: auto;
+    height: 100px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+    width: 100%;
+}
+
+nav i {
+    color: #000;
+    font-size: 50px;
+}
+
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .nav-menu a:hover {
+    text-decoration: underline;
+  }
+  h1{
+    font-family: bebas neue;
+    font-size: 50px;
+    margin-left: 50px;
+    text-decoration: underline;
+  }
+  .berita-terbaru-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membuat grid dengan 2 kolom */
+    gap: 30px; /* Jarak antar elemen grid */
+    justify-content: center; /* Memusatkan grid secara horizontal */
+    margin: 0 auto; /* Menempatkan kontainer di tengah halaman */
+    padding: 20px;
+    width: 90%; /* Lebar kontainer menyesuaikan layar */
+}
+
+.card-berita-terbaru {
+    text-align: center; /* Memusatkan teks di setiap kartu berita */
+    background-color: #fff; /* Warna latar opsional */
+    border: 1px solid #ddd; /* Tambahkan border jika ingin */
+    padding: 10px;
+}
+
+.card-berita-terbaru img {
+    width: 100%; /* Gambar memenuhi lebar elemen kartu */
+    height: 300px; /* Tinggi gambar seragam */
+    object-fit: cover; /* Memotong gambar agar tetap proporsional */
+    border-radius: 5px; /* Opsional: membuat sudut gambar sedikit melengkung */
+}
+
+.card-berita-terbaru h3, .card-berita-terbaru p {
+    margin: 10px 0;
+    word-wrap: break-word; /* Membuat teks panjang tetap di dalam elemen */
+    font-size: 16px; /* Ukuran font */
+}
+
+
+   /* Footer */
+ .footer {
+    margin-top: 100px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer-logo img {
+    width: 130px;
+    height: 100px;
+  }
+
+ .logo-page{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 550px;
+  }
+  
+
+

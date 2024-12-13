@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Periksa apakah pengguna sudah login
+if (!isset($_SESSION['id_user'])) {
+    header('Location: signin.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,36 +139,31 @@
   </div>
 </section>
 
+<!--Highlights Section-->
+  <?php
+  include 'koneksi.php'; // File koneksi ke database
 
-  <section class="highlights">
+  $sql_highlights = "SELECT judul, foto FROM highlights ORDER BY id_highlights ASC";
+  $result_highlights = $conn->query($sql_highlights);
+
+  $highlights = [];
+  if ($result_highlights->num_rows > 0) {
+    while ($row = $result_highlights->fetch_assoc()) {
+        $highlights[] = $row;
+    }
+  }
+  ?>
+<section class="highlights">
     <h2 class="highlights-title">Highlights</h2>
     <div class="highlights-container">
-        <div class="card-highlights">
-            <img src="img/psg4.jpg" alt="highlights 1">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-highlights">
-            <img src="img/psg2.jpg" alt="highlights 2">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-highlights">
-            <img src="img/psg3.jpg" alt="highlights 3">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-highlights">
-            <img src="img/psg4.jpg" alt="highlights 4">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-highlights">
-            <img src="img/psg5.jpg" alt="highlights 5">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-highlights">
-            <img src="img/psg6.jpg" alt="highlights 6">
-            <p>Klub PSG Menang</p> 
-        </div>
+        <?php foreach ($highlights as $item): ?>
+            <div class="card-highlights">
+                <img src="data:image/jpeg;base64,<?= base64_encode($item['foto']); ?>" alt="<?= $item['judul']; ?>">
+                <p><?= $item['judul']; ?></p>
+            </div>
+        <?php endforeach; ?>
     </div>
-  </section>
+</section>
 
   <!-- Footer Section -->
   <footer class="footer">
