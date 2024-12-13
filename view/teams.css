@@ -94,7 +94,7 @@ nav i {
     transform: scaleX(-1); /* Membuat clip path miring ke kanan */
     transition: 0.3s ease-in-out;
 }
- a:hover {
+ .container a:hover {
     background-color: red; /* Ubah warna saat hover */
     transform: scale(1.05); /* Efek pembesaran */
 }

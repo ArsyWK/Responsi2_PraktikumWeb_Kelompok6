@@ -21,7 +21,7 @@
         </nav>
     </header>
     <div class="logo">
-      <img class="logo-img" src="img/Logo-PSG.png" alt="PSG Logo">
+      <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
 
     <div class="container">
@@ -58,7 +58,7 @@
     <div class="card-container">
         <div class="card">
             <div class="image-container">
-                <img src="img/pemain.png" alt="Player Image" class="player-image">
+                <img src="../img/pemain.png" alt="Player Image" class="player-image">
                 <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -87,7 +87,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -115,7 +115,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -143,7 +143,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -171,7 +171,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -198,7 +198,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -226,7 +226,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -255,7 +255,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -283,7 +283,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -311,7 +311,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -345,7 +345,7 @@
     <div class="card-container">
         <div class="card">
             <div class="image-container">
-                <img src="img/pemain.png" alt="Player Image" class="player-image">
+                <img src="../img/pemain.png" alt="Player Image" class="player-image">
                 <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -374,7 +374,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -402,7 +402,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -430,7 +430,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -458,7 +458,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -485,35 +485,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -541,7 +513,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -569,7 +541,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -597,7 +569,35 @@
         <div class="card-container">
             <div class="card">
                 <div class="image-container">
-                    <img src="img/pemain.png" alt="Player Image" class="player-image">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
+                    <div class="player-name-overlay">
+                    <h2>Gelandang</h2>
+                    <p>Jonna P. Diddy</p>
+                    </div>
+                <div class="stats-container">
+                    <div class="stats-1">
+                        <div class="play">
+                            <h3>Permainan</h3>
+                            <p>30</p>
+                        </div>
+                        <div class="goal">
+                            <h3>Gol</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stats-2">
+                        <h3>Assist</h3>
+                        <p>2</p>
+                    </div>
+                </div>
+                </div>
+            </div>   
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="image-container">
+                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
                     <div class="player-name-overlay">
                     <h2>Gelandang</h2>
                     <p>Jonna P. Diddy</p>
@@ -650,7 +650,7 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="img/image 9.png" alt="PSG Logo">
+      <img src="../img/image 9.png" alt="PSG Logo">
     </div>
   </footer>
 

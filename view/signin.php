@@ -15,7 +15,7 @@
 
     <div class="container">
         <div class="image-profile">
-            <img src="img/Component 1.png" alt="">
+            <img src="../img/Component 1.png" alt="">
         </div>
         <div class="form">
             <h2>Sign In</h2>
@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="img/Logo-PSG.png" alt="PSG Logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
 </body>

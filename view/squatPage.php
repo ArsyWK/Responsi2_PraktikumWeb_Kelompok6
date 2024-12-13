@@ -20,7 +20,7 @@
         </nav>
     </header>
     <div class="logo-page">
-        <img class="logo" src="img/image 9.png" alt="PSG Logo">
+        <img class="logo" src="../img/image 9.png" alt="PSG Logo">
     </div>
         <ul class="tabs">
             <li><a href="#">Artikel</a></li>

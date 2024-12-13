@@ -11,7 +11,7 @@
        <!-- Header Section -->
   <header class="header">
   <div class="logo">
-      <img class="logo-img" src="img/Logo-PSG.png" alt="PSG Logo">
+      <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
       <nav class="nav-menu">
           <ul>
@@ -29,7 +29,7 @@
     <section class="berita-terbaru-container">
 
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -73,7 +73,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -95,7 +95,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -106,7 +106,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -117,7 +117,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -128,7 +128,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -139,7 +139,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -150,7 +150,7 @@
         </div>
       </div>
       <div class="card-berita-terbaru">
-        <img src="img/psg1.jpg" alt="Berita Terbaru 1">
+        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
         <div class="card-berita-terbaru-text">
             <div class="card-berita-terbaru-title">
                 <p>Kylian Mbappe</p>
@@ -185,7 +185,7 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="img/Logo-PSG.png" alt="PSG Logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
   </body>

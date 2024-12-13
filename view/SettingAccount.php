@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profile.css?v=<?php echo time();?>">
-    <title>Profile</title>
+    <title>Account Setting</title>
+    <link rel="stylesheet" href="SettingAcc.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-
-<header class="header">
+       <!-- Header Section -->
+  <header class="header">
   <div class="logo">
-      <img class="logo-img" src="img/Logo-PSG.png" alt="PSG Logo">
+      <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
       <nav class="nav-menu">
           <ul>
@@ -23,31 +24,19 @@
         </nav>
     </header>
 
-<div class="container">
-    <div class="img-profile">
-        <img src="img/usericon.png" alt="">
+    <div class="profile">
+      <img class="profile-img" src="../img/usericon.png" alt="image profile">
     </div>
+    <div class="profile-name">Arsy W2</div>
+        <div class="profile-email">Arsy.wicaksono@mhs.unsoed.ac.id</div>
+    <div class="profile-button">
+        <button class="edit-button">Edit Profile</button>
+        <div class="menu">...</div>
+    </div>
+      
     
-    <div class="profile-container">
-        <div class="setting-profile">
-            <label for="name">
-                Name
-            </label><br>
-            <input type="text" name="name" id="name"><br>
-            <label for="password">
-                Password
-            </label><br>
-            <input type="password" name="password" id="password"><br>
-            
-            <div class="button-container">
-                <button>Save</button>
-                <button>Logout</button>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
+    
+    <!-- Footer Section -->
     <footer class="footer">
     <div class="footer-content">
       <div>
@@ -71,9 +60,10 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="img/image 9.png" alt="PSG Logo">
+      <img src="../img/image 9.png" alt="PSG Logo">
     </div>
   </footer>
+
 
 </body>
 </html>

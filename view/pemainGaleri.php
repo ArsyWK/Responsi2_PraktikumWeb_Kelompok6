@@ -21,7 +21,7 @@
         </nav>
     </header>
     <div class="logo">
-      <img class="logo-img" src="img/Logo-PSG.png" alt="PSG Logo">
+      <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
 
     <div class="container">
@@ -47,7 +47,7 @@
     <div class="galeri-pemain-container">
 
       <div class="card-galeri-pemain">
-        <img src="img/psg1.jpg" alt="Galeri Pemain 1">
+        <img src="../img/psg1.jpg" alt="Galeri Pemain 1">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Kylian Mbappe</p>
@@ -59,7 +59,7 @@
       </div>
 
       <div class="card-galeri-pemain">
-        <img src="img/psg2.jpg" alt="Galeri Pemain 2">
+        <img src="../img/psg2.jpg" alt="Galeri Pemain 2">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Neymar Jr</p>
@@ -71,7 +71,7 @@
       </div>
 
       <div class="card-galeri-pemain">
-        <img src="img/psg3.jpg" alt="Galeri Pemain 3">
+        <img src="../img/psg3.jpg" alt="Galeri Pemain 3">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Mauro Icardi</p>
@@ -83,7 +83,7 @@
       </div>
 
       <div class="card-galeri-pemain">
-        <img src="img/psg4.jpg" alt="Galeri Pemain 4">
+        <img src="../img/psg4.jpg" alt="Galeri Pemain 4">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Angel Di Maria</p>
@@ -95,7 +95,7 @@
       </div>
 
       <div class="card-galeri-pemain">
-        <img src="img/psg5.jpg" alt="Galeri Pemain 5">
+        <img src="../img/psg5.jpg" alt="Galeri Pemain 5">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Leandro Paredes</p>
@@ -107,7 +107,7 @@
       </div>
 
       <div class="card-galeri-pemain">
-        <img src="img/psg6.jpg" alt="Galeri Pemain 6">
+        <img src="../img/psg6.jpg" alt="Galeri Pemain 6">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Marquinhos</p>
@@ -119,7 +119,7 @@
       </div>
 
       <div class="card-galeri-pemain">
-        <img src="img/psg7.jpg" alt="Galeri Pemain 7">
+        <img src="../img/psg7.jpg" alt="Galeri Pemain 7">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Presnel Kimpembe</p>
@@ -131,7 +131,7 @@
       </div>
 
       <div class="card-galeri-pemain">
-        <img src="img/psg8.jpg" alt="Galeri Pemain 8">
+        <img src="../img/psg8.jpg" alt="Galeri Pemain 8">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Keylor Navas</p>
@@ -143,7 +143,7 @@
       </div>
 
       <div class="card-galeri-pemain">
-        <img src="img/psg9.jpg" alt="Galeri Pemain 9">
+        <img src="../img/psg9.jpg" alt="Galeri Pemain 9">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Sergio Rico</p>
@@ -155,7 +155,29 @@
       </div>
 
       <div class="card-galeri-pemain">
-        <img src="img/psg10.jpg" alt="Galeri Pemain 10">
+        <img src="../img/psg10.jpg" alt="Galeri Pemain 10">
+        <div class="card-galeri-pemain-text">
+            <div class="card-galeri-pemain-title">
+                <p>Ander Herrera</p>
+            </div>
+            <div class="card-galeri-pemain-desc">
+            <p>Gelandang | <span>Paris Saint-Germain</span></p>
+            </div>
+        </div>
+      </div>
+      <div class="card-galeri-pemain">
+        <img src="../img/psg10.jpg" alt="Galeri Pemain 10">
+        <div class="card-galeri-pemain-text">
+            <div class="card-galeri-pemain-title">
+                <p>Ander Herrera</p>
+            </div>
+            <div class="card-galeri-pemain-desc">
+            <p>Gelandang | <span>Paris Saint-Germain</span></p>
+            </div>
+        </div>
+      </div>
+      <div class="card-galeri-pemain">
+        <img src="../img/psg10.jpg" alt="Galeri Pemain 10">
         <div class="card-galeri-pemain-text">
             <div class="card-galeri-pemain-title">
                 <p>Ander Herrera</p>
@@ -168,5 +190,33 @@
 
     </div>
   </section>
+
+   <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>Paris Saint Germain</h3>
+        <ul>
+          <li><a href="#">Tim Pertama</a></li>
+          <li><a href="#">Tim Wanita</a></li>
+          <li><a href="#">Tentang Klub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Servis</h3>
+        <ul>
+          <li><a href="#">Akun</a></li>
+          <li><a href="#">Tiket</a></li>
+          <li><a href="#">Market</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tentang Kami</h3>
+      </div>
+    </div>
+    <div class="footer-logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
+    </div>
+  </footer>
 </body>
 </html>

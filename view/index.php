@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PSG - Dream Bigger</title>
-  <link rel="stylesheet" href="styless.css">
+  <link rel="stylesheet" href="styless.css?v=<?php echo time(); ?>">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <!-- Header Section -->
   <header class="header">
     <div class="logo">
-      <img class="logo-img" src="img/Logo-PSG.png" alt="PSG Logo">
+      <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
     <nav class="nav-menu">
       <ul>
@@ -27,7 +27,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
-      <video width="100%" height="100%"  src="video/hero(1).mp4" autoplay loop muted></video>
+      <video width="100%" height="100%"  src="../video/hero(1).mp4" autoplay loop muted></video>
       <h1>Paris Saint Germain</h1>
       <p>Dream Bigger</p>
     </div>
@@ -37,15 +37,15 @@
   <section class="berita">
     <div class="berita-header">
         <h2>Berita Terbaru</h2>
-        <div class="btn-carousel">
+        <!-- <div class="btn-carousel">
             <button class="btn-kiri"> < </button>
             <button class="btn-kanan"> > </button>
-        </div>
+        </div> -->
     </div>
     <div class="berita-container">
 
       <div class="card-berita">
-        <img src="img/psg1.jpg" alt="Berita 1">
+        <img src="../img/psg1.jpg" alt="Berita 1">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="card-berita">
-        <img src="img/psg2.jpg" alt="Berita 2">
+        <img src="../img/psg2.jpg" alt="Berita 2">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -69,7 +69,7 @@
       </div>
 
       <div class="card-berita">
-        <img src="img/psg3.jpg" alt="Berita 3">
+        <img src="../img/psg3.jpg" alt="Berita 3">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -81,7 +81,7 @@
       </div>
 
       <div class="card-berita">
-        <img src="img/psg4.jpg" alt="Berita 4">
+        <img src="../img/psg4.jpg" alt="Berita 4">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -93,7 +93,7 @@
       </div>
 
       <div class="card-berita">
-        <img src="img/psg5.jpg" alt="Berita 5">
+        <img src="../img/psg5.jpg" alt="Berita 5">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -105,7 +105,7 @@
       </div>
 
       <div class="card-berita">
-        <img src="img/psg6.jpg" alt="Berita 6">
+        <img src="../img/psg6.jpg" alt="Berita 6">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -117,7 +117,7 @@
       </div>
 
       <div class="card-berita">
-        <img src="img/psg7.jpg" alt="Berita 7">
+        <img src="../img/psg7.jpg" alt="Berita 7">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -129,7 +129,7 @@
       </div>
 
       <div class="card-berita">
-        <img src="img/psg8.jpg" alt="Berita 8">
+        <img src="../img/psg8.jpg" alt="Berita 8">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -141,7 +141,7 @@
       </div>
 
       <div class="card-berita">
-        <img src="img/psg9.jpg" alt="Berita 9">
+        <img src="../img/psg9.jpg" alt="Berita 9">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -153,7 +153,7 @@
       </div>
 
       <div class="card-berita">
-        <img src="img/psg10.jpg" alt="Berita 10">
+        <img src="../img/psg10.jpg" alt="Berita 10">
         <div class="card-berita-text">
             <div class="card-berita-title">
                 <p>Kemenangan pada awal tahun</p>
@@ -166,13 +166,30 @@
 
     </div>
   </section>
+  
+
+<script>
+  // const btnKiri = document.querySelector('.btn-kiri');
+  //   const btnKanan = document.querySelector('.btn-kanan');
+    const beritaContainer = document.querySelector('.berita-container');
+
+    btnKiri.addEventListener('click', () => {
+        beritaContainer.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+
+    btnKanan.addEventListener('click', () => {
+        beritaContainer.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+</script>
+
+
 
   <!-- MVP Section -->
   <section class="mvp-section">
   <div class="container-mvp">
     <!-- Bagian gambar pemain -->
     <div class="mvp-person">
-      <img src="img/pemain.png" alt="Pemain MVP">
+      <img src="../img/pemain.png" alt="Pemain MVP">
     </div>
     
     <!-- Bagian teks MVP -->
@@ -202,27 +219,27 @@
     <h2 class="gallery-title">Gallery</h2>
     <div class="gallery-container">
         <div class="card-galery">
-            <img src="img/psg4.jpg" alt="galery 1">
+            <img src="../img/psg4.jpg" alt="galery 1">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-galery">
-            <img src="img/psg5.jpg" alt="galery 2">
+            <img src="../img/psg5.jpg" alt="galery 2">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-galery">
-            <img src="img/psg3.jpg" alt="galery 3">
+            <img src="../img/psg3.jpg" alt="galery 3">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-galery">
-            <img src="img/psg4.jpg" alt="galery 4">
+            <img src="../img/psg4.jpg" alt="galery 4">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-galery">
-            <img src="img/psg5.jpg" alt="galery 5">
+            <img src="../img/psg5.jpg" alt="galery 5">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-galery">
-            <img src="img/psg6.jpg" alt="galery 6">
+            <img src="../img/psg6.jpg" alt="galery 6">
             <p>Klub PSG Menang</p> 
         </div>
     </div>
@@ -232,27 +249,27 @@
     <h2 class="highlights-title">Highlights</h2>
     <div class="highlights-container">
         <div class="card-highlights">
-            <img src="img/psg4.jpg" alt="highlights 1">
+            <img src="../img/psg4.jpg" alt="highlights 1">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-highlights">
-            <img src="img/psg2.jpg" alt="highlights 2">
+            <img src="../img/psg2.jpg" alt="highlights 2">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-highlights">
-            <img src="img/psg3.jpg" alt="highlights 3">
+            <img src="../img/psg3.jpg" alt="highlights 3">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-highlights">
-            <img src="img/psg4.jpg" alt="highlights 4">
+            <img src="../img/psg4.jpg" alt="highlights 4">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-highlights">
-            <img src="img/psg5.jpg" alt="highlights 5">
+            <img src="../img/psg5.jpg" alt="highlights 5">
             <p>Klub PSG Menang</p> 
         </div>
         <div class="card-highlights">
-            <img src="img/psg6.jpg" alt="highlights 6">
+            <img src="../img/psg6.jpg" alt="highlights 6">
             <p>Klub PSG Menang</p> 
         </div>
     </div>
@@ -282,7 +299,7 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="img/image 9.png" alt="PSG Logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
 </body>

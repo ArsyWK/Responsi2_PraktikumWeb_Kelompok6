@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .logo-img{
+    width: auto;
+    height: 100px;
+  }
+
+
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+    width: 100%;
+}
+
+nav i {
+    color: #000;
+    font-size: 50px;
+}
+
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+.nav-menu a:hover {
+    text-decoration: underline; 
+} .content h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.content{
+    display: flex;
+}
+
+.survey-buttons {
+    
+}
+
+.survey-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.survey-buttons button:hover {
+    background-color: #444;
+    /* margin-top: 5px; */
+}
+
+.question{
+    padding: 40px;
+}
+
+.question-list {
+    padding: 50px;
+    font-size: 18px;
+    color: #888;
+}
+
+.question-list p {
+    margin: 10px 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.q-1{
+    display: block;
+}
+
+.q-2{
+    display: none;
+}
+
+.q-3{
+    display: none;
+}
+
+.q-4{
+    display: none;
+}
+
+.q-5{
+    display: none;
+}
+
+.congrats  h1{
+    display: none;
+}
+
+.congrats-title{
+    display: none;
+}
+
+.question-list p span {
+    display: block;
+    height: 1px;
+    background-color: #888;
+    width: 100%;
+    margin-top: 5px;
+}

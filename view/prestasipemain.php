@@ -21,7 +21,7 @@
         </nav>
     </header>
     <div class="logo">
-      <img class="logo-img" src="img/Logo-PSG.png" alt="PSG Logo">
+      <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
 
     <div class="container">
@@ -71,7 +71,7 @@
     </div>   
 
     <div class="picture">
-        <img class="psg-icon" src="img/image 20.png" alt="Psg Logo">
+        <img class="psg-icon" src="../img/image 20.png" alt="Psg Logo">
     </div>
     
     <div class="table-container">
@@ -140,7 +140,7 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="img/image 9.png" alt="PSG Logo">
+      <img src="../img/image 9.png" alt="PSG Logo">
     </div>
   </footer>
 

@@ -10,7 +10,7 @@
     
     <!-- header -->
     <header class="header">
-     <img src="img/Logo-PSG.png" alt="PSG Logo">
+     <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </header>
 
     <div class="container">
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="img/Logo-PSG.png" alt="PSG Logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
 </body>

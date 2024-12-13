@@ -11,7 +11,7 @@
        <!-- Header Section -->
   <header class="header">
   <div class="logo">
-      <img class="logo-img" src="img/Logo-PSG.png" alt="PSG Logo">
+      <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
       <nav class="nav-menu">
           <ul>
@@ -34,7 +34,7 @@
     </div>
     <i class='bx bx-bookmarks'></i>
     <div class="news-image">
-        <img src="img/image 21.png" alt="News Image">
+        <img src="../img/image 21.png" alt="News Image">
     </div>
     <div class="news-content">
         <p>
@@ -69,7 +69,7 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="img/image 9.png" alt="PSG Logo">
+      <img src="../img/image 9.png" alt="PSG Logo">
     </div>
   </footer>
 </body>

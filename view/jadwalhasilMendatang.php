@@ -22,7 +22,7 @@
     </header>
 
     <div class="logo">
-    <img class="logo-img" src="img/Logo-PSG.png" alt="PSG Logo">
+    <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
 
     <div class="container">
@@ -64,12 +64,12 @@
             <div class="match-team">
                 <h2>Paris Saint Germain</h2>
             </div>
-            <img class="psg-logo" src="img/Logo-PSG.png" alt="Psg Logo">
+            <img class="psg-logo" src="../img/Logo-PSG.png" alt="Psg Logo">
             <div class="score-container">
                 <p>1</p>
                 <p>0</p>
             </div>
-            <img class="team-logo" src="img/manchestercity.png" alt="Manchester City Logo">
+            <img class="team-logo" src="../img/manchestercity.png" alt="Manchester City Logo">
             <div class="match-team">
                 <h2>Manchester City</h2>
             </div>
@@ -84,12 +84,12 @@
             <div class="match-team">
                 <h2>Paris Saint Germain</h2>
             </div>
-            <img class="psg-logo" src="img/Logo-PSG.png" alt="Psg Logo">
+            <img class="psg-logo" src="../img/Logo-PSG.png" alt="Psg Logo">
             <div class="score-container">
                 <p>2</p>
                 <p>0</p>
             </div>
-            <img class="team-logo" src="img/chelsea.png" alt="chelsea Logo">
+            <img class="team-logo" src="../img/chelsea.png" alt="chelsea Logo">
             <div class="match-team">
                 <h2>Chelsea</h2>
             </div>
@@ -104,12 +104,12 @@
             <div class="match-team">
                 <h2>Paris Saint Germain</h2>
             </div>
-            <img class="psg-logo" src="img/Logo-PSG.png" alt="Psg Logo">
+            <img class="psg-logo" src="../img/Logo-PSG.png" alt="Psg Logo">
             <div class="score-container">
                 <p>1</p>
                 <p>0</p>
             </div>
-            <img class="team-logo" src="img/arsenal.png" alt="arsenal Logo">
+            <img class="team-logo" src="../img/arsenal.png" alt="arsenal Logo">
             <div class="match-team">
                 <h2>Arsenal</h2>
             </div>
@@ -124,12 +124,12 @@
             <div class="match-team">
                 <h2>Borussia Dortmund</h2>
             </div>
-            <img class="team-logo" src="img/bvb.png" alt="bvb Logo">
+            <img class="team-logo" src="../img/bvb.png" alt="bvb Logo">
             <div class="score-container">
                 <p>4</p>
                 <p>0</p>
             </div>
-            <img class="psg-logo" src="img/Logo-PSG.png" alt="Psg Logo">
+            <img class="psg-logo" src="../img/Logo-PSG.png" alt="Psg Logo">
             <div class="match-team">
                 <h2>Paris Saint Germain</h2>
             </div>
@@ -162,7 +162,7 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="img/image 9.png" alt="PSG Logo">
+      <img src="../img/image 9.png" alt="PSG Logo">
     </div>
   </footer>
 
