@@ -34,6 +34,19 @@
   </section>
 
   <!-- Berita Terbaru Section -->
+  <?php
+  include 'koneksi.php'; // File koneksi ke database Anda
+
+  $sql = "SELECT judul, tim, tanggal, isi, gambar FROM berita ORDER BY tanggal DESC LIMIT 10";
+  $result = $conn->query($sql);
+  $berita = [];
+  if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $berita[] = $row;
+    }
+  }
+  ?>
+
   <section class="berita">
     <div class="berita-header">
         <h2>Berita Terbaru</h2>
@@ -44,126 +57,19 @@
     </div>
     <div class="berita-container">
 
+    <?php foreach ($berita as $item): ?>
       <div class="card-berita">
-        <img src="img/psg1.jpg" alt="Berita 1">
+        <img src="data:image/jpeg;base64,<?= base64_encode($item['gambar']); ?>" alt="<?= $item['judul']; ?>">
         <div class="card-berita-text">
             <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
+                <p><?= $item['judul']; ?></p>
             </div>
             <div class="card-berita-desc">
-                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+                <p><?= $item['tim']; ?> | <span><?= date('d F Y', strtotime($item['tanggal'])); ?></span></p>
             </div>
         </div>
       </div>
-
-      <div class="card-berita">
-        <img src="img/psg2.jpg" alt="Berita 2">
-        <div class="card-berita-text">
-            <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
-            </div>
-            <div class="card-berita-desc">
-            <p>Tim Pertama | <span>1 Januari 2025</span></p>
-            </div>
-        </div>
-      </div>
-
-      <div class="card-berita">
-        <img src="img/psg3.jpg" alt="Berita 3">
-        <div class="card-berita-text">
-            <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
-            </div>
-            <div class="card-berita-desc">
-            <p>Tim Pertama | <span>1 Januari 2025</span></p>
-            </div>
-        </div>
-      </div>
-
-      <div class="card-berita">
-        <img src="img/psg4.jpg" alt="Berita 4">
-        <div class="card-berita-text">
-            <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
-            </div>
-            <div class="card-berita-desc">
-            <p>Tim Pertama | <span>1 Januari 2025</span></p>
-            </div>
-        </div>
-      </div>
-
-      <div class="card-berita">
-        <img src="img/psg5.jpg" alt="Berita 5">
-        <div class="card-berita-text">
-            <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
-            </div>
-            <div class="card-berita-desc">
-            <p>Tim Pertama | <span>1 Januari 2025</span></p>
-            </div>
-        </div>
-      </div>
-
-      <div class="card-berita">
-        <img src="img/psg6.jpg" alt="Berita 6">
-        <div class="card-berita-text">
-            <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
-            </div>
-            <div class="card-berita-desc">
-            <p>Tim Pertama | <span>1 Januari 2025</span></p>
-            </div>
-        </div>
-      </div>
-
-      <div class="card-berita">
-        <img src="img/psg7.jpg" alt="Berita 7">
-        <div class="card-berita-text">
-            <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
-            </div>
-            <div class="card-berita-desc">
-            <p>Tim Pertama | <span>1 Januari 2025</span></p>
-            </div>
-        </div>
-      </div>
-
-      <div class="card-berita">
-        <img src="img/psg8.jpg" alt="Berita 8">
-        <div class="card-berita-text">
-            <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
-            </div>
-            <div class="card-berita-desc">
-            <p>Tim Pertama | <span>1 Januari 2025</span></p>
-            </div>
-        </div>
-      </div>
-
-      <div class="card-berita">
-        <img src="img/psg9.jpg" alt="Berita 9">
-        <div class="card-berita-text">
-            <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
-            </div>
-            <div class="card-berita-desc">
-            <p>Tim Pertama | <span>1 Januari 2025</span></p>
-            </div>
-        </div>
-      </div>
-
-      <div class="card-berita">
-        <img src="img/psg10.jpg" alt="Berita 10">
-        <div class="card-berita-text">
-            <div class="card-berita-title">
-                <p>Kemenangan pada awal tahun</p>
-            </div>
-            <div class="card-berita-desc">
-            <p>Tim Pertama | <span>1 Januari 2025</span></p>
-            </div>
-        </div>
-      </div>
-
+    <?php endforeach; ?>
     </div>
   </section>
 
@@ -198,35 +104,31 @@
 </section>
 
   <!-- Gallery Section -->
-  <section class="gallery">
-    <h2 class="gallery-title">Gallery</h2>
-    <div class="gallery-container">
-        <div class="card-galery">
-            <img src="img/psg4.jpg" alt="galery 1">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-galery">
-            <img src="img/psg5.jpg" alt="galery 2">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-galery">
-            <img src="img/psg3.jpg" alt="galery 3">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-galery">
-            <img src="img/psg4.jpg" alt="galery 4">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-galery">
-            <img src="img/psg5.jpg" alt="galery 5">
-            <p>Klub PSG Menang</p> 
-        </div>
-        <div class="card-galery">
-            <img src="img/psg6.jpg" alt="galery 6">
-            <p>Klub PSG Menang</p> 
-        </div>
-    </div>
-  </section>
+  <?php
+  include 'koneksi.php'; // File koneksi ke database Anda
+
+  $sql = "SELECT judul, foto FROM galeri ORDER BY id_galeri DESC";
+  $result = $conn->query($sql);
+  $galeri = [];
+  if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $galeri[] = $row;
+    }
+  }
+  ?>
+
+<section class="gallery">
+  <h2 class="gallery-title">Gallery</h2>
+  <div class="gallery-container">
+    <?php foreach ($galeri as $item): ?>
+      <div class="card-galery">
+        <img src="data:image/jpeg;base64,<?= base64_encode($item['foto']); ?>" alt="<?= $item['judul']; ?>">
+        <p><?= $item['judul']; ?></p>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</section>
+
 
   <section class="highlights">
     <h2 class="highlights-title">Highlights</h2>
