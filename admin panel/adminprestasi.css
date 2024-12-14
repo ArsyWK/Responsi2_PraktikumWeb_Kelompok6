@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
   }
- 
  /* Header */
  .header {
     display: flex;
@@ -189,7 +189,7 @@ tbody td:first-child {
   /* background-color: black; */
   color: #000;
 }
-  
+ 
   /* Footer */
   .footer {
     background-color: #000;
@@ -197,6 +197,7 @@ tbody td:first-child {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
   }
   
   .footer-content {
@@ -212,6 +213,45 @@ tbody td:first-child {
     text-decoration: none;
     color: #fff;
   }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
   
   .footer-logo img {
     width: 150px;
@@ -225,6 +265,7 @@ tbody td:first-child {
     top: 100px;
     left: 550px;
   }
+  
   
   .plus button {
     width: 40px;

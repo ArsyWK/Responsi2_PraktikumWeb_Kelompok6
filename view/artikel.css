@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
   }
  
  /* Header */
@@ -133,7 +134,7 @@ nav i {
 .card-artikel-desc span {
     color: #000;
 }
-  
+ 
   /* Footer */
   .footer {
     background-color: #000;
@@ -141,6 +142,7 @@ nav i {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
   }
   
   .footer-content {
@@ -156,6 +158,45 @@ nav i {
     text-decoration: none;
     color: #fff;
   }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
   
   .footer-logo img {
     width: 150px;

@@ -26,7 +26,7 @@
     <div class="tagline">
     <h1>Berita Terbaru</h1>
     <div class="plus"><button type="button" id="toggleFormBtnBerita"><i class='bx bx-plus'></i></button></div>
-    </div>
+</div>
     
     <div class="form-containerBerita" id="form-containerBerita" style="display: none;">
   <form id="popup-formBerita">
@@ -217,7 +217,6 @@
         </div>
       </div>
     </section>
-
   <!-- Footer Section -->
   <footer class="footer">
     <div class="footer-content">
@@ -238,12 +237,39 @@
         </ul>
       </div>
       <div>
-        <h3>Tentang Kami</h3>
+      <h3>Tentang Kami</h3>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/psg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-instagram-alt'></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/PSG" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-facebook-circle'></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/PSG_English" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-twitter' ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/PSG" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-youtube' ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@psg" target="_blank" rel="noopener noreferrer">
+          <i class='bx bxl-tiktok' ></i>
+          </a>
+        </li>
+      </ul>
       </div>
     </div>
     <div class="footer-logo">
       <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
-  </body>
+</body>
 </html>

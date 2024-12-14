@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
   }
  
  /* Header */
@@ -146,7 +147,13 @@ nav i {
     clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%); /* Membuat bentuk segiempat miring */
     transition: 0.3s ease-in-out;
 }
-
+.match-date {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  font-style: italic;
+}
     .jadwal-container{
     margin-left: 60px;
     margin-right: 50px;
@@ -213,6 +220,7 @@ nav i {
     width: 30%;
     text-align: left;
     align-items: center;
+
   }
 
   .score-container p{
@@ -242,28 +250,6 @@ nav i {
     gap: 10px;
 }
 
-/*
-  .manchester-logo{ 
-    width: auto;
-    height: 20vh;
-    gap: 10px;
-
-}
-  .chelsea-logo{ 
-    width: auto;
-    height: 20vh;
-    gap: 10px;
-}
-  .arsenal-logo{ 
-    width: auto;
-    height: 20vh;
-    gap: 10px;
-}
-  .bvb-logo{ 
-    width: auto;
-    height: 25vh;
-    gap: 10px;
-} */
   .match-team h2{
     text-align: center;
     margin-top: 20px;
@@ -271,7 +257,7 @@ nav i {
     margin-right: 50px;
     margin-left: 50px;
 }
-  
+ 
   /* Footer */
   .footer {
     background-color: #000;
@@ -279,6 +265,7 @@ nav i {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
   }
   
   .footer-content {
@@ -294,6 +281,45 @@ nav i {
     text-decoration: none;
     color: #fff;
   }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
   
   .footer-logo img {
     width: 150px;

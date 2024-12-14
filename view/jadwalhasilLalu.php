@@ -65,9 +65,14 @@
                 <h2>Paris Saint Germain</h2>
             </div>
             <img class="psg-logo" src="../img/Logo-PSG.png" alt="Psg Logo">
+            <div class="score-date">
             <div class="score-container">
                 <p>1</p>
                 <p>0</p>
+            </div>
+            <div class="match-date">
+            <p>Minggu, November 23 2024</p>
+            </div>
             </div>
             <img class="team-logo" src="../img/manchestercity.png" alt="Manchester City Logo">
             <div class="match-team">
@@ -85,9 +90,14 @@
                 <h2>Paris Saint Germain</h2>
             </div>
             <img class="psg-logo" src="../img/Logo-PSG.png" alt="Psg Logo">
+            <div class="score-date">
             <div class="score-container">
                 <p>2</p>
-                <p>0</p>
+                <p>0</p> 
+            </div>
+            <div class="match-date">
+            <p>Minggu, November 23 2024</p>
+            </div>
             </div>
             <img class="team-logo" src="../img/chelsea.png" alt="chelsea Logo">
             <div class="match-team">
@@ -105,9 +115,14 @@
                 <h2>Paris Saint Germain</h2>
             </div>
             <img class="psg-logo" src="../img/Logo-PSG.png" alt="Psg Logo">
+            <div class="score-date">
             <div class="score-container">
                 <p>1</p>
                 <p>0</p>
+            </div>
+            <div class="match-date">
+            <p>Minggu, November 23 2024</p>
+            </div>
             </div>
             <img class="team-logo" src="../img/arsenal.png" alt="arsenal Logo">
             <div class="match-team">
@@ -125,9 +140,14 @@
                 <h2>Paris Saint Germain</h2>
             </div>
             <img class="psg-logo" src="../img/Logo-PSG.png" alt="Psg Logo">
+            <div class="score-date">
             <div class="score-container">
                 <p>4</p>
                 <p>0</p>
+            </div>
+            <div class="match-date">
+            <p>Minggu, November 23 2024</p>
+            </div>
             </div>
             <img class="team-logo" src="../img/bvb.png" alt="bvb Logo">
             <div class="match-team">
@@ -158,13 +178,39 @@
         </ul>
       </div>
       <div>
-        <h3>Tentang Kami</h3>
+      <h3>Tentang Kami</h3>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/psg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-instagram-alt'></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/PSG" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-facebook-circle'></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/PSG_English" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-twitter' ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/PSG" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-youtube' ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@psg" target="_blank" rel="noopener noreferrer">
+          <i class='bx bxl-tiktok' ></i>
+          </a>
+        </li>
+      </ul>
       </div>
     </div>
     <div class="footer-logo">
       <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
-
-
 </body>
+</html>

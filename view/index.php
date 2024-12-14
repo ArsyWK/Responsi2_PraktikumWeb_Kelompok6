@@ -266,27 +266,57 @@
     <div class="gallery-container">
         <div class="card-galery">
             <img src="../img/psg4.jpg" alt="galery 1">
-            <p>Klub PSG Menang</p> 
+            <div class="card-galery-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-galery-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
         <div class="card-galery">
             <img src="../img/psg5.jpg" alt="galery 2">
-            <p>Klub PSG Menang</p> 
+            <div class="card-galery-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-galery-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
         <div class="card-galery">
             <img src="../img/psg3.jpg" alt="galery 3">
-            <p>Klub PSG Menang</p> 
+            <div class="card-galery-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-galery-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
         <div class="card-galery">
             <img src="../img/psg4.jpg" alt="galery 4">
-            <p>Klub PSG Menang</p> 
+            <div class="card-galery-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-galery-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
         <div class="card-galery">
             <img src="../img/psg5.jpg" alt="galery 5">
-            <p>Klub PSG Menang</p> 
+            <div class="card-galery-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-galery-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
         <div class="card-galery">
             <img src="../img/psg6.jpg" alt="galery 6">
-            <p>Klub PSG Menang</p> 
+            <div class="card-galery-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-galery-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
     </div>
   </section>
@@ -296,31 +326,62 @@
     <div class="highlights-container">
         <div class="card-highlights">
             <img src="../img/psg4.jpg" alt="highlights 1">
-            <p>Klub PSG Menang</p> 
+            <div class="card-highlights-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-highlights-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
         <div class="card-highlights">
             <img src="../img/psg2.jpg" alt="highlights 2">
-            <p>Klub PSG Menang</p> 
+            <div class="card-highlights-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-highlights-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div>  
         </div>
         <div class="card-highlights">
             <img src="../img/psg3.jpg" alt="highlights 3">
-            <p>Klub PSG Menang</p> 
+            <div class="card-highlights-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-highlights-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
         <div class="card-highlights">
             <img src="../img/psg4.jpg" alt="highlights 4">
-            <p>Klub PSG Menang</p> 
+            <div class="card-highlights-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-highlights-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
         <div class="card-highlights">
             <img src="../img/psg5.jpg" alt="highlights 5">
-            <p>Klub PSG Menang</p> 
+            <div class="card-highlights-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-highlights-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div> 
         </div>
         <div class="card-highlights">
             <img src="../img/psg6.jpg" alt="highlights 6">
-            <p>Klub PSG Menang</p> 
+            <div class="card-highlights-title">
+                <p>Kemenangan pada awal tahun</p>
+            </div>
+            <div class="card-highlights-desc">
+                <p>Tim Pertama | <span>1 Januari 2025</span></p>
+            </div>  
         </div>
     </div>
   </section>
 
+  
   <!-- Footer Section -->
   <footer class="footer">
     <div class="footer-content">
@@ -341,7 +402,34 @@
         </ul>
       </div>
       <div>
-        <h3>Tentang Kami</h3>
+      <h3>Tentang Kami</h3>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/psg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-instagram-alt'></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/PSG" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-facebook-circle'></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/PSG_English" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-twitter' ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/PSG" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-youtube' ></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@psg" target="_blank" rel="noopener noreferrer">
+          <i class='bx bxl-tiktok' ></i>
+          </a>
+        </li>
+      </ul>
       </div>
     </div>
     <div class="footer-logo">

@@ -68,6 +68,23 @@ nav i {
     margin-left: 50px;
     text-decoration: underline;
   }
+  .card-berita-terbaru-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+  }
+  .card-berita-terbaru-desc{
+    font-size: 15px;
+    font-size: medium;
+  }
+  .card-berita-terbaru-desc p{
+    font-size: 20px;
+    color: #004170;
+  }
+  .card-berita-terbaru-desc span{
+    font-size: 20px;
+    color: #000;
+  }
   .berita-terbaru-container{
     display: flex;
     gap: 50px;
@@ -81,7 +98,7 @@ nav i {
     width: auto;
     height: 400px;
   }
-  
+ 
   /* Footer */
   .footer {
     background-color: #000;
@@ -105,6 +122,45 @@ nav i {
     text-decoration: none;
     color: #fff;
   }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
   
   .footer-logo img {
     width: 150px;
