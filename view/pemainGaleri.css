@@ -133,42 +133,40 @@ nav i {
   height: 250px;
   object-fit: cover;
 }
+  
+  /* Footer */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-content {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+    height: auto;
+  }
 
-
-/* Footer */
-.footer {
-  margin-top: 100px;
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-content {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-content ul {
-  list-style: none;
-}
-
-.footer-content a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.footer-logo img {
-  width: 100px;
-  height: 100px;
-}
-
-.logo-page {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%); /* Memusatkan logo */
-}
+ .logo-page{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 550px;
+  }
+  

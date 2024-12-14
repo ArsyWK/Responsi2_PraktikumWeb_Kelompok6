@@ -138,7 +138,7 @@
         </div>
     </div>
 
-        <!-- Footer Section -->
+  <!-- Footer Section -->
   <footer class="footer">
     <div class="footer-content">
       <div>
@@ -162,7 +162,7 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="../img/image 9.png" alt="PSG Logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
 

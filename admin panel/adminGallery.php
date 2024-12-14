@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri Pemain</title>
-    <link rel="stylesheet" href="pemainGaleri.css">
+    <link rel="stylesheet" href="adminGallery.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -42,6 +42,59 @@
        </div>
     </div>
         
+    <div class="plus"><button type="button" id="toggleFormBtnHighlight"><i class='bx bx-plus'></i></button></div>
+    </div>
+    
+    <div class="form-containerHighlight" id="form-containerHighlight" style="display: none;">
+  <form id="popup-formHighlight">
+    <button type="button" id="closeFormBtnHighlight">&times;</button>
+
+    <label for="upload-image">Upload Image</label>
+    <input type="file" id="upload-image" name="upload-image">
+
+    <label for="judul">Judul</label>
+    <input type="text" id="judul" name="judul" placeholder="Masukkan judul" required>
+
+    <label for="nama-tim">Nama Tim</label>
+    <input type="text" id="nama-tim" name="nama-tim" placeholder="Masukkan nama tim" required>
+
+    <label for="tanggal-tahun">Tanggal Tahun</label>
+    <div class="date-inputs">
+      <input type="text" id="tanggal" name="tanggal" maxlength="2" placeholder="DD" required>
+      <input type="text" id="bulan" name="bulan" maxlength="2" placeholder="MM" required>
+      <input type="text" id="tahun" name="tahun" maxlength="4" placeholder="YYYY" required>
+    </div>
+
+    <button type="submit" id="submitFormBtn">Submit</button>
+  </form>
+</div>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const toggleFormBtnHighlight = document.getElementById('toggleFormBtnHighlight');
+    const formContainerHighlight = document.getElementById('form-containerHighlight');
+    const closeFormBtnHighlight = document.getElementById('closeFormBtnHighlight');
+    const popupFormHighlight = document.getElementById('popup-formHighlight');
+
+    // Fungsi untuk membuka form
+    toggleFormBtnHighlight.addEventListener('click', () => {
+        formContainerHighlight.style.display = 'flex';
+    });
+
+    // Fungsi untuk menutup form
+    closeFormBtnHighlight.addEventListener('click', () => {
+        formContainerHighlight.style.display = 'none';
+    });
+
+    // Menutup form jika pengguna klik di luar form
+    document.addEventListener('click', (e) => {
+        if (!formContainerHighlight.contains(e.target) && !toggleFormBtnHighlight.contains(e.target)) {
+            formContainerHighlight.style.display = 'none';
+        }
+    });
+  });
+
+  </script>
+
   <!-- Galeri Pemain Section -->
   <section class="galeri-pemain">
     <div class="galeri-pemain-container">

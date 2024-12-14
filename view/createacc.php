@@ -10,7 +10,7 @@
     
     <!-- header -->
     <header class="header">
-     <img src="../img/Logo-PSG.png" alt="PSG Logo">
+     <a href="index.php"><img src="../img/Logo-PSG.png" alt="PSG Logo"></a>
     </header>
 
     <div class="container">
@@ -31,13 +31,14 @@
             <label for="confirm-password">Konfirmasi Password</label>
             <input type="password" id="confirm-password" name="confirm-password" placeholder="Masukkan password kembali" required>
 
-            <button type="submit">Sign in</button>
+            <a href="signin.php"><button type="submit">Sign in</button></a>
             </form>
 
         </div>
     </div>
 
-     <!-- Footer Section -->
+
+  <!-- Footer Section -->
   <footer class="footer">
     <div class="footer-content">
       <div>

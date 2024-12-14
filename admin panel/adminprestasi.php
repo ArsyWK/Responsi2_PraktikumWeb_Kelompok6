@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestasi Pemain</title>
-    <link rel="stylesheet" href="prestasi.css">
+    <link rel="stylesheet" href="adminprestasi.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -50,6 +50,55 @@
             <h1>Tim Wanita</h1>
         </div>
     </div>
+
+    <div class="plus"><button type="button" id="toggleFormBtn"><i class='bx bx-plus'></i></button></div>
+ 
+    
+    <div class="form-container" id="form-container" style="display: none;">
+  <form id="popup-form">
+    <button type="button" id="closeFormBtn">&times;</button>
+
+    <label for="judul">Judul Pertandingan</label>
+    <input type="text" id="judul" name="judul" placeholder="Masukkan judul pertandingan" required>
+
+    <label for="nama-tim">Nilai Pertandingan</label>
+    <input type="text" id="nama-tim" name="nama-tim" placeholder="Masukkan nilai pertandingan tim" required>
+
+    <button type="submit" id="submitFormBtn">Submit</button>
+  </form>
+</div>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const toggleFormBtn = document.getElementById('toggleFormBtn');
+    const formContainer = document.getElementById('form-container');
+    const closeFormBtn = document.getElementById('closeFormBtn');
+
+    // Fungsi untuk membuka form
+    toggleFormBtn.addEventListener('click', () => {
+        formContainer.style.display = (formContainer.style.display === 'none' || formContainer.style.display === '') 
+            ? 'flex' 
+            : 'none';
+    });
+
+    // Fungsi untuk menutup form
+    closeFormBtn.addEventListener('click', () => {
+        formContainer.style.display = 'none';
+    });
+
+    // Menutup form jika pengguna klik di luar form
+    document.addEventListener('click', (e) => {
+        if (
+            formContainer.style.display === 'flex' && 
+            !formContainer.contains(e.target) && 
+            !toggleFormBtn.contains(e.target)
+        ) {
+            formContainer.style.display = 'none';
+        }
+    });
+});
+
+
+  </script>
 
     <div class="score-table">
         <div class="score-box">

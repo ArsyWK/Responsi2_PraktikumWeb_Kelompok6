@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadwal Hasil Pemain</title>
-    <link rel="stylesheet" href="hasil.css">
+    <link rel="stylesheet" href="adminjadwal.css??v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -51,6 +51,89 @@
             <a href="#"><h1>Pertandingan Mendatang</h1></a>
         </div>
     </div>
+
+    <div class="plus">
+        <button type="button" id="toggleFormBtn">
+            <i class='bx bx-plus'></i>
+        </button>
+    </div>
+    
+
+    <div class="form-container" id="form-container">
+           <button type="button" id="closeFormBtn">&times;</button>
+        <form id="team-form">
+            <div class="team-row">
+            <div class="form-group">
+                <label for="team-name-1">Nama Tim</label>
+                <input type="text" id="team-name-1" name="team-name-1" placeholder="Nama Tim">
+            </div>
+            <div class="form-group">
+                <label for="team-logo-1">Upload Logo</label>
+                <input type="file" id="team-logo-1" name="team-logo-1">
+            </div>
+            <div class="form-group">
+                <label for="team-score-1">Skor</label>
+                <input type="text" id="team-score-1" name="team-score-1" placeholder="Skor">
+            </div>
+            </div>
+
+            <div class="team-row">
+            <div class="form-group">
+                <label for="team-name-2">Nama Tim</label>
+                <input type="text" id="team-name-2" name="team-name-2" placeholder="Nama Tim">
+            </div>
+            <div class="form-group">
+                <label for="team-logo-2">Upload Logo</label>
+                <input type="file" id="team-logo-2" name="team-logo-2">
+            </div>
+            <div class="form-group">
+                <label for="team-score-2">Skor</label>
+                <input type="text" id="team-score-2" name="team-score-2" placeholder="Skor">
+            </div>
+            </div>
+
+            <div class="date-row">
+            <label for="tanggal">Tanggal Tahun</label>
+            <div class="date-inputs">
+                <input type="text" id="tanggal" name="tanggal" maxlength="2" placeholder="DD">
+                <input type="text" id="bulan" name="bulan" maxlength="2" placeholder="MM">
+                <input type="text" id="tahun" name="tahun" maxlength="4" placeholder="YYYY">
+            </div>
+            </div>
+
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+    </div>
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const toggleFormBtn = document.getElementById('toggleFormBtn');
+    const formContainer = document.getElementById('form-container');
+    const closeFormBtn = document.getElementById('closeFormBtn');
+
+    // Fungsi untuk membuka form
+    toggleFormBtn.addEventListener('click', () => {
+        formContainer.style.display = 'block';
+    });
+
+    // Fungsi untuk menutup form
+    closeFormBtn.addEventListener('click', () => {
+        formContainer.style.display = 'none';
+    });
+
+    // Menutup form jika pengguna klik di luar form
+    document.addEventListener('click', (e) => {
+        if (
+            formContainer.style.display === 'block' &&
+            !formContainer.contains(e.target) &&
+            !toggleFormBtn.contains(e.target)
+        ) {
+            formContainer.style.display = 'none';
+        }
+    });
+});
+
+</script>
 
     <div class="periode-container">
     <h2 class="periode">2023/2024</h2>
@@ -136,7 +219,7 @@
         </div>
             
         </div>
-    </div>
+    </>
 
 
   <!-- Footer Section -->

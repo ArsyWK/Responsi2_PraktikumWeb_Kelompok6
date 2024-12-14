@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -76,7 +76,6 @@ nav i {
     font-weight: bold;
     color: #fff;
   }
-
   .artikel a {
     text-decoration: none;
     padding: 10px 20px 10px 40px;
@@ -98,96 +97,41 @@ nav i {
     background-color: red; /* Ubah warna saat hover */
     transform: scale(1.05); /* Efek pembesaran */
 }
-    .Pemain{
-      display: flex;
-      width: 100%;
-      height: auto;
-      gap: 10px;
-      justify-content: center;
-      font-size: 10px;
-      margin: auto;
-      margin-top: 30px;
-}
-h1:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
 
-.score-table {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: auto;
-    width: 90%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.galeri-pemain{
+  padding: 50px;
+  max-width: 1200px; /* Membatasi lebar maksimum */
+  margin: 20px auto; /* Memusatkan konten */
+  height: auto;
 }
-
-.score-box {
-    text-align: center;
+.galeri-pemain-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
+  max-width: 1200px; /* Membatasi lebar maksimum */
+  margin: 20px auto; /* Memusatkan konten */
+  height: auto;
+    
 }
-
-.score {
-    font-size: 48px;
-    font-weight: bold;
-    color: red;
-    margin: 0;
-}
-
-.label {
-    font-size: 16px;
-    color: black;
-    margin: 0;
-}
-.psg-icon {
-  margin: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
-.picture img {
-    width: 90vw;
-    height: auto;
-    margin: auto;
-    margin-top: 40px;
-
-}
-
-.table-container {
-  /* border: 2px solid black; */
-  padding: 55px;
-  background-color:white;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  text-align: center;
-  /* border: 2px solid black; */
-}
-
-th, td {
-  border: 5px solid black;
-  padding: 60px;
+.card-galeri-pemain-title{
+  color: red;
   font-weight: bold;
 }
 
-td {
-  padding: 30px;
+.card-galeri-pemain-desc p{
+  color: blue;
+  font-family: 'Bebas Neue';
 }
 
-thead th {
-  /* background-color: black; */
+.card-galeri-pemain-desc span{
   color: #000;
 }
 
-tbody td:first-child {
-  /* background-color: black; */
-  color: #000;
+.card-galeri-pemain img{
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
 }
   
   /* Footer */
@@ -226,3 +170,100 @@ tbody td:first-child {
     left: 550px;
   }
   
+  
+.plus button{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    margin: auto;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.plus button i {
+    font-size: 24px;
+}
+.form-container {
+  position: fixed;
+  top:60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 8px;
+  margin-left: 400px;
+}
+
+.form-container button#closeFormBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-container input[type="file"],
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  padding: 4px;
+}
+.form-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.date-inputs input {
+  flex: 1;
+  text-align: center;
+}

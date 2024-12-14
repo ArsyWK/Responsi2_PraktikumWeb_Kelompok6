@@ -63,9 +63,7 @@ nav i {
     display: flex;
 }
 
-.survey-buttons {
-    
-}
+
 
 .survey-buttons button {
     padding: 10px 20px;
@@ -91,6 +89,11 @@ nav i {
     padding: 50px;
     font-size: 18px;
     color: #888;
+}
+.question-list p:hover {
+    /* padding: 50px;
+    font-size: 18px; */
+    color: #000;
 }
 
 .question-list p {
@@ -134,3 +137,92 @@ nav i {
     width: 100%;
     margin-top: 5px;
 }
+.popup {
+    display: block;
+    visibility: hidden;
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    transition: transform 0.4s, top 0.4s, visibility 0.4s;
+    z-index: 100;
+}
+
+.popup.open-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.question-list p:last-child + .popup{
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+}
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #000;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    /* display: block; */
+}
+  
+  /* Footer */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-content {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+    height: auto;
+  }
+
+ .logo-page{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 550px;
+  }
+  

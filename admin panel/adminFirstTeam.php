@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fisrt Team</title>
-    <link rel="stylesheet" href="teams.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="adminFirstTeam.css?v=<?php echo time();?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -50,6 +50,69 @@
             <h1>Tim Wanita</h1>
         </div>
     </div>
+
+    <div class="plus"><button type="button" id="toggleFormBtn"><i class='bx bx-plus'></i></button></div>
+    <div class="form-container" id="form-container" style="display: none;">
+  <form id="popup-form">
+    <button type="button" id="closeFormBtn">&times;</button>
+
+    <label for="nama-orang">Nama Orang</label>
+    <input type="text" id="nama-orang" name="nama-orang" placeholder="Masukkan nama orang" required>
+
+    <label for="nama-role">Nama Role</label>
+    <input type="text" id="nama-role" name="nama-role" placeholder="Masukkan nama role" required>
+
+    <label for="asal">Asal</label>
+    <input type="text" id="asal" name="asal" placeholder="Masukkan asal" required>
+
+    <label for="permainan">Permainan, Goal, Assist</label>
+    <div class="small-inputs">
+      <input type="text" id="permainan" name="permainan" placeholder="Permainan" required>
+      <input type="text" id="goal" name="goal" placeholder="Goal" required>
+      <input type="text" id="assist" name="assist" placeholder="Assist" required>
+    </div>
+
+    <label for="tanggal-lahir">Tanggal Lahir</label>
+    <div class="date-inputs">
+      <input type="text" id="tanggal" name="tanggal" maxlength="2" placeholder="DD" required>
+      <input type="text" id="bulan" name="bulan" maxlength="2" placeholder="MM" required>
+      <input type="text" id="tahun" name="tahun" maxlength="4" placeholder="YYYY" required>
+    </div>
+
+    <label for="tinggi-berat">Tinggi Badan / Berat Badan</label>
+    <div class="small-inputs">
+      <input type="text" id="tinggi-badan" name="tinggi-badan" placeholder="Tinggi (cm)" required>
+      <input type="text" id="berat-badan" name="berat-badan" placeholder="Berat (kg)" required>
+    </div>
+
+    <button type="submit" id="submitFormBtn">Submit</button>
+  </form>
+</div>
+    <script>
+     document.addEventListener('DOMContentLoaded', () => {
+    const toggleFormBtn = document.getElementById('toggleFormBtn');
+    const formContainer = document.getElementById('form-container');
+    const closeFormBtn = document.getElementById('closeFormBtn');
+    const popupForm = document.getElementById('popup-form');
+
+    // Fungsi untuk membuka form
+    toggleFormBtn.addEventListener('click', () => {
+        formContainer.style.display = 'flex';
+    });
+
+    // Fungsi untuk menutup form
+    closeFormBtn.addEventListener('click', () => {
+        formContainer.style.display = 'none';
+    });
+
+    // Menutup form jika pengguna klik di luar form
+    document.addEventListener('click', (e) => {
+        if (!formContainer.contains(e.target) && !toggleFormBtn.contains(e.target)) {
+            formContainer.style.display = 'none';
+        }
+    });
+     });
+</script>
 
     <h2 class="position">Attacker</h2>
 
@@ -655,3 +718,5 @@
   </footer>
 </body>
 </html>
+
+

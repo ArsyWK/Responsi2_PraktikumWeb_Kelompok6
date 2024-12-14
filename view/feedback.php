@@ -27,16 +27,13 @@
 
     <div class="content">
         <div class="question-list">
-            <p>Question 1<span></span></p>
-            <p>Question 2<span></span></p>
-            <p>Question 3<span></span></p>
-            <p>Question 4<span><h1></h1></span></p>
-            <p>Question 5<span></span></p>
+            <p class="q-1">Question 1<span></span></p>
+            <p class="q-2">Question 2<span></span></p>
+            <p class="q-3">Question 3<span></span></p>
+            <p class="q-4">Question 4<span><h1></h1></span></p>
+            <p class="q-5">Question 5<span></span></p>
         </div>
         <div class="question">
-
-        
-                <h1 class="congrats-title">Terima kasih! Anda telah menjawab semua pertanyaan</h1>
 
             <h1 class="q-2">Apakah anda merasa mudah untuk menavigasi seluruh bagian website ini?</h1>
             <h1 class="q-5">Sejauh mana Anda merasa website ini menarik secara visual dan interaktif></h1>
@@ -48,9 +45,43 @@
                 <button onclick="nextQuestion()">Kurang sesuai</button><br>
                 <button onclick="nextQuestion()">Sesuai</button><br>
                 <button onclick="nextQuestion()">Sangat sesuai</button><br>
+                <div class="popup" id="popup">
+                        <img src="../img/tick1.png">
+                        <h2>Terima Kasih!</h2>
+                        <p>Feedback anda telah kami terima</p>
+                        <button type="button" onclick="closePopup()"> OK </button>
+                    </div>
             </div>
         </div>
     </div>
+    
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>Paris Saint Germain</h3>
+        <ul>
+          <li><a href="#">Tim Pertama</a></li>
+          <li><a href="#">Tim Wanita</a></li>
+          <li><a href="#">Tentang Klub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Servis</h3>
+        <ul>
+          <li><a href="#">Akun</a></li>
+          <li><a href="#">Tiket</a></li>
+          <li><a href="#">Market</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tentang Kami</h3>
+      </div>
+    </div>
+    <div class="footer-logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
+    </div>
+  </footer>
 </body>
 
 <script>
@@ -74,9 +105,15 @@
         document.querySelector('.q-1').style.display = 'block';
         document.querySelector('.q-4').style.display = 'none';
     } else if (currentQuestion === 6) {
-        document.querySelector('.congrats-title').style.display = 'block';
+        document.getElementById('popup').classList.add('open-popup');
         document.querySelector('.q-5').style.display = 'none';
-    }
+        // openPopup();
+                }
+            }
+
+            function closePopup() {
+    document.getElementById('popup').classList.remove("open-popup");
 }
+
 </script>
 </html>

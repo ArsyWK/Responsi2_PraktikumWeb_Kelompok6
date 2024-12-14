@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klub Page</title>
-    <link rel="stylesheet" href="klub.css">
+    <link rel="stylesheet" href="klub.css?v=<?php echo time(); ?>" >
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -52,8 +52,9 @@
     </div>
 
 
-    <!-- Footer Section -->
-    <footer class="footer">
+
+  <!-- Footer Section -->
+  <footer class="footer">
     <div class="footer-content">
       <div>
         <h3>Paris Saint Germain</h3>
@@ -76,9 +77,8 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="../img/image 9.png" alt="PSG Logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
-
 </body>
 </html>

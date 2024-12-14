@@ -11,7 +11,7 @@
         <!-- Header Section -->
   <header class="header">
   <div class="logo">
-      <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
+      <a href="index.php"><img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo"></a>
     </div>
       <nav class="nav-menu">
           <ul>
@@ -55,15 +55,15 @@
                 <input type="password" id="confirm-password" placeholder="Masukkan password kembali">
             </div>
             <div class="actions">
-                <a href="#" class="back-button">&#8592;</a>
+                <a href="SettingAccount.php" class="back-button">&#8592;</a>
                 <button class="save-button">Save Profile</button>
             </div>
         </div>
     </div>
 
-        
-    <!-- Footer Section -->
-    <footer class="footer">
+
+  <!-- Footer Section -->
+  <footer class="footer">
     <div class="footer-content">
       <div>
         <h3>Paris Saint Germain</h3>
@@ -86,12 +86,8 @@
       </div>
     </div>
     <div class="footer-logo">
-      <img src="../img/image 9.png" alt="PSG Logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
-
-
-</body>
-</html>
 </body>
 </html>

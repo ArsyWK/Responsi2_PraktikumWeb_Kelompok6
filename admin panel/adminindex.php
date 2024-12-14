@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PSG - Dream Bigger</title>
-  <link rel="stylesheet" href="styless.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="adminindex.css?v=<?php echo time(); ?>">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -83,8 +83,71 @@
   <!-- Berita Terbaru Section -->
   <section class="berita" id="berita">
     <div class="berita-header">
-        <a href="#berita"><h2>Berita Terbaru</h2></a>
+        <div class="line"><a href="#berita"><h2>Berita Terbaru</h2></a></div>
+        <div class="plus"><button type="button" id="toggleFormBtn"><i class='bx bx-plus'></i></button></div>
+      </div>
+
+      <div class="form-container" id="form-container" style="display: none;">
+  <form id="popup-form">
+    <button type="button" id="closeFormBtn">&times;</button>
+
+    <label for="upload-image">Upload Image</label>
+    <input type="file" id="upload-image" name="upload-image">
+
+    <label for="judul">Judul</label>
+    <input type="text" id="judul" name="judul" placeholder="Masukkan judul" required>
+
+    <label for="nama-tim">Nama Tim</label>
+    <input type="text" id="nama-tim" name="nama-tim" placeholder="Masukkan nama tim" required>
+
+    <label for="tanggal-tahun">Tanggal Tahun</label>
+    <div class="date-inputs">
+      <input type="text" id="tanggal" name="tanggal" maxlength="2" placeholder="DD" required>
+      <input type="text" id="bulan" name="bulan" maxlength="2" placeholder="MM" required>
+      <input type="text" id="tahun" name="tahun" maxlength="4" placeholder="YYYY" required>
     </div>
+
+    <button type="submit" id="submitFormBtn">Submit</button>
+  </form>
+</div>
+</div>
+
+
+    <script>
+     document.addEventListener('DOMContentLoaded', () => {
+    const toggleFormBtn = document.getElementById('toggleFormBtn');
+    const formContainer = document.getElementById('form-container');
+    const closeFormBtn = document.getElementById('closeFormBtn');
+    const popupForm = document.getElementById('popup-form');
+
+    // Fungsi untuk membuka form
+    toggleFormBtn.addEventListener('click', () => {
+        formContainer.style.display = 'flex';
+    });
+
+    // Fungsi untuk menutup form
+    closeFormBtn.addEventListener('click', () => {
+        formContainer.style.display = 'none';
+    });
+
+    // Menutup form jika pengguna klik di luar form
+    document.addEventListener('click', (e) => {
+        if (!formContainer.contains(e.target) && !toggleFormBtn.contains(e.target)) {
+            formContainer.style.display = 'none';
+        }
+    });
+
+    // Menangani pengiriman form
+    popupForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Mencegah reload halaman
+
+        // Reset form dan tutup popup
+        popupForm.reset();
+        formContainer.style.display = 'none';
+    });
+});
+    </script>
+  </div>
     <div class="berita-container" id="berita-container">
 
       <div class="card-berita">
@@ -224,7 +287,7 @@
         beritaContainer.scrollBy({ left: 200, behavior: 'smooth' });
     });
 
-    
+
 
 </script>
 
@@ -262,7 +325,61 @@
 
   <!-- Gallery Section -->
   <section class="gallery">
+    <div class="container-gallery">
     <h2 class="gallery-title">Gallery</h2>
+    <div class="plus"><button type="button" id="toggleFormBtnGallery"><i class='bx bx-plus'></i></button></div>
+    </div>
+    
+    <div class="form-containerGallery" id="form-containerGallery" style="display: none;">
+  <form id="popup-formGallery">
+    <button type="button" id="closeFormBtnGallery">&times;</button>
+
+    <label for="upload-image">Upload Image</label>
+    <input type="file" id="upload-image" name="upload-image">
+
+    <label for="judul">Judul</label>
+    <input type="text" id="judul" name="judul" placeholder="Masukkan judul" required>
+
+    <label for="nama-tim">Nama Tim</label>
+    <input type="text" id="nama-tim" name="nama-tim" placeholder="Masukkan nama tim" required>
+
+    <label for="tanggal-tahun">Tanggal Tahun</label>
+    <div class="date-inputs">
+      <input type="text" id="tanggal" name="tanggal" maxlength="2" placeholder="DD" required>
+      <input type="text" id="bulan" name="bulan" maxlength="2" placeholder="MM" required>
+      <input type="text" id="tahun" name="tahun" maxlength="4" placeholder="YYYY" required>
+    </div>
+
+    <button type="submit" id="submitFormBtn">Submit</button>
+  </form>
+</div>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const toggleFormBtnGallery = document.getElementById('toggleFormBtnGallery');
+    const formContainerGallery = document.getElementById('form-containerGallery');
+    const closeFormBtnGallery = document.getElementById('closeFormBtnGallery');
+    const popupFormGallery = document.getElementById('popup-formGallery');
+
+    // Fungsi untuk membuka form
+    toggleFormBtnGallery.addEventListener('click', () => {
+        formContainerGallery.style.display = 'flex';
+    });
+
+    // Fungsi untuk menutup form
+    closeFormBtnGallery.addEventListener('click', () => {
+        formContainerGallery.style.display = 'none';
+    });
+
+    // Menutup form jika pengguna klik di luar form
+    document.addEventListener('click', (e) => {
+        if (!formContainerGallery.contains(e.target) && !toggleFormBtnGallery.contains(e.target)) {
+            formContainerGallery.style.display = 'none';
+        }
+    });
+  });
+
+  </script>
+
     <div class="gallery-container">
         <div class="card-galery">
             <img src="../img/psg4.jpg" alt="galery 1">
@@ -292,7 +409,63 @@
   </section>
 
   <section class="highlights">
+    <div class="container-highlights">
     <h2 class="highlights-title">Highlights</h2>
+    <div class="plus"><button type="button" id="toggleFormBtnHighlight"><i class='bx bx-plus'></i></button></div>
+    </div>
+    
+    <div class="form-containerHighlight" id="form-containerHighlight" style="display: none;">
+  <form id="popup-formHighlight">
+    <button type="button" id="closeFormBtnHighlight">&times;</button>
+
+    <label for="upload-image">Upload Image</label>
+    <input type="file" id="upload-image" name="upload-image">
+
+    <label for="judul">Judul</label>
+    <input type="text" id="judul" name="judul" placeholder="Masukkan judul" required>
+
+    <label for="nama-tim">Nama Tim</label>
+    <input type="text" id="nama-tim" name="nama-tim" placeholder="Masukkan nama tim" required>
+
+    <label for="tanggal-tahun">Tanggal Tahun</label>
+    <div class="date-inputs">
+      <input type="text" id="tanggal" name="tanggal" maxlength="2" placeholder="DD" required>
+      <input type="text" id="bulan" name="bulan" maxlength="2" placeholder="MM" required>
+      <input type="text" id="tahun" name="tahun" maxlength="4" placeholder="YYYY" required>
+    </div>
+
+    <button type="submit" id="submitFormBtn">Submit</button>
+  </form>
+</div>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const toggleFormBtnHighlight = document.getElementById('toggleFormBtnHighlight');
+    const formContainerHighlight = document.getElementById('form-containerHighlight');
+    const closeFormBtnHighlight = document.getElementById('closeFormBtnHighlight');
+    const popupFormHighlight = document.getElementById('popup-formHighlight');
+
+    // Fungsi untuk membuka form
+    toggleFormBtnHighlight.addEventListener('click', () => {
+        formContainerHighlight.style.display = 'flex';
+    });
+
+    // Fungsi untuk menutup form
+    closeFormBtnHighlight.addEventListener('click', () => {
+        formContainerHighlight.style.display = 'none';
+    });
+
+    // Menutup form jika pengguna klik di luar form
+    document.addEventListener('click', (e) => {
+        if (!formContainerHighlight.contains(e.target) && !toggleFormBtnHighlight.contains(e.target)) {
+            formContainerHighlight.style.display = 'none';
+        }
+    });
+  });
+
+  </script>
+
+
+
     <div class="highlights-container">
         <div class="card-highlights">
             <img src="../img/psg4.jpg" alt="highlights 1">

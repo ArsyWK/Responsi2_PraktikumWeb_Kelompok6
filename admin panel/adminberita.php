@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita Page</title>
-    <link rel="stylesheet" href="berita.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="adminberita.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -23,8 +23,64 @@
             <i class='bx bxs-user-circle'></i>
         </nav>
     </header>
-
+    <div class="tagline">
     <h1>Berita Terbaru</h1>
+    <div class="plus"><button type="button" id="toggleFormBtnBerita"><i class='bx bx-plus'></i></button></div>
+    </div>
+    
+    <div class="form-containerBerita" id="form-containerBerita" style="display: none;">
+  <form id="popup-formBerita">
+    <button type="button" id="closeFormBtnBerita">&times;</button>
+
+    <label for="upload-image">Upload Image</label>
+    <input type="file" id="upload-image" name="upload-image">
+
+    <label for="judul">Judul</label>
+    <input type="text" id="judul" name="judul" placeholder="Masukkan judul" required>
+
+    <label for="nama-tim">Nama Tim</label>
+    <input type="text" id="nama-tim" name="nama-tim" placeholder="Masukkan nama tim" required>
+
+    <label for="tanggal-tahun">Tanggal Tahun</label>
+    <div class="date-inputs">
+      <input type="text" id="tanggal" name="tanggal" maxlength="2" placeholder="DD" required>
+      <input type="text" id="bulan" name="bulan" maxlength="2" placeholder="MM" required>
+      <input type="text" id="tahun" name="tahun" maxlength="4" placeholder="YYYY" required>
+    </div>
+
+    <label for="isi-berita">Isi Berita</label><br>
+    <textarea id="isi-berita" name="isi-berita" placeholder="Masukkan isi berita"></textarea>
+
+    <button type="submit" id="submitFormBtn">Submit</button>
+  </form>
+</div>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const toggleFormBtnBerita = document.getElementById('toggleFormBtnBerita');
+    const formContainerBerita = document.getElementById('form-containerBerita');
+    const closeFormBtnBerita = document.getElementById('closeFormBtnBerita');
+    const popupFormBerita = document.getElementById('popup-formBerita');
+
+    // Fungsi untuk membuka form
+    toggleFormBtnBerita.addEventListener('click', () => {
+        formContainerBerita.style.display = 'flex';
+    });
+
+    // Fungsi untuk menutup form
+    closeFormBtnBerita.addEventListener('click', () => {
+        formContainerBerita.style.display = 'none';
+    });
+
+    // Menutup form jika pengguna klik di luar form
+    document.addEventListener('click', (e) => {
+        if (!formContainerBerita.contains(e.target) && !toggleFormBtnBerita.contains(e.target)) {
+            formContainerBerita.style.display = 'none';
+        }
+    });
+  });
+
+  </script>
+
     <!-- Berita Terbaru Section -->
     <section class="berita-terbaru-container">
 

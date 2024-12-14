@@ -84,19 +84,9 @@ span{
     font-weight: 600;
     
 }
-
-
-
-
-
-
-
-
-
-
-   /* Footer */
- .footer {
-    margin-top: 100px;
+  
+  /* Footer */
+  .footer {
     background-color: #000;
     color: #fff;
     padding: 20px;
@@ -106,7 +96,7 @@ span{
   
   .footer-content {
     display: flex;
-    gap: 20px;
+    gap: 40px;
   }
   
   .footer-content ul {
@@ -119,8 +109,8 @@ span{
   }
   
   .footer-logo img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: auto;
   }
 
  .logo-page{

@@ -62,23 +62,33 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer-info">
-            <p>Paris Saint Germain</p>
-            <ul>
-                <li><a href="#">Tim Pertama</a></li>
-                <li><a href="#">Tim Wanita</a></li>
-                <li><a href="#">Tentang Klub</a></li>
-            </ul>
-        </div>
-        <div class="footer-services">
-            <p>Servis</p>
-            <ul>
-                <li><a href="#">Akun</a></li>
-                <li><a href="#">Tiket</a></li>
-                <li><a href="#">Market</a></li>
-            </ul>
-        </div>
-    </footer>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>Paris Saint Germain</h3>
+        <ul>
+          <li><a href="#">Tim Pertama</a></li>
+          <li><a href="#">Tim Wanita</a></li>
+          <li><a href="#">Tentang Klub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Servis</h3>
+        <ul>
+          <li><a href="#">Akun</a></li>
+          <li><a href="#">Tiket</a></li>
+          <li><a href="#">Market</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tentang Kami</h3>
+      </div>
+    </div>
+    <div class="footer-logo">
+      <img src="../img/Logo-PSG.png" alt="PSG Logo">
+    </div>
+  </footer>
 </body>
 </html>

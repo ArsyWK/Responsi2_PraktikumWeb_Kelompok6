@@ -267,14 +267,126 @@ nav{
     display: flex;
     justify-content: space-between;
   }
+
   .berita-header h2:hover{
     text-decoration: underline;
-
   }
 
 .berita-header h2:focus{
   text-decoration: underline;
 }
+.plus{
+    width: 50px; /* Lebar tombol */
+    height: 50px; /* Tinggi tombol */
+    border-radius: 50%; /* Membuat tombol menjadi bulat */
+    background-color: #000; /* Warna latar belakang tombol */
+    color: white; /* Warna teks */
+    border: none; /* Menghilangkan border */
+    display: flex; /* Untuk memposisikan teks */
+    align-items: center; /* Vertikal tengah */
+    justify-content: center; /* Horizontal tengah */
+    cursor: pointer; /* Mengubah cursor menjadi pointer */
+
+}
+
+.plus button{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    margin: auto;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.plus button i {
+    font-size: 24px;
+}
+
+.form-container {
+  position: fixed;
+  top:60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 8px;
+  margin-left: 400px;
+}
+
+.form-container button#closeFormBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-container input[type="file"],
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  padding: 4px;
+}
+.form-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.date-inputs input {
+  flex: 1;
+  text-align: center;
+}
+
 
 .berita-header a{
   text-decoration: none;
@@ -371,6 +483,11 @@ nav{
     color: #fff;
     clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
   }
+  .container-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .card-galery{
     margin-top: 20px;
   }
@@ -382,7 +499,6 @@ nav{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-
     gap: 20px;
   }
 
@@ -390,6 +506,111 @@ nav{
     flex: 1;
     text-align: center;
   }
+
+  .form-containerGallery {
+    position: fixed;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+    margin-left: 400px;
+  }
+  
+  .form-containerGallery button#closeFormBtnGallery {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .form-containerGallery input[type="file"],
+  .form-containerGallery input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-containerGallery button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .form-containerGallery button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+
+  .form-containerHighlight {
+    position: fixed;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+    margin-left: 400px;
+  }
+  
+  .form-containerHighlight button#closeFormBtnHighlight {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .form-containerHighlight input[type="file"],
+  .form-containerHighlight input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-containerHighlight button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .form-containerHighlight button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+
   /* Highlight Section */
   .highlights {
     padding: 20px;
@@ -404,6 +625,11 @@ nav{
     padding-top: 15px;
     color: #fff;
     clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  }
+  .container-highlights{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .card-highlights{
     margin-top: 20px;

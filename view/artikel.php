@@ -193,8 +193,9 @@
     </div>
   </section>
 
+
   <!-- Footer Section -->
-<footer class="footer">
+  <footer class="footer">
     <div class="footer-content">
       <div>
         <h3>Paris Saint Germain</h3>
