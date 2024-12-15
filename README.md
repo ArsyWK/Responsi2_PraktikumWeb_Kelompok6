@@ -24,7 +24,7 @@ Fitur-fitur yang disebutkan didukung oleh fitur sign in dan register akun yang d
 
 ##  File Proyek
 ```
-Bombakar/
+PSG/
 |── admin panel/        # Pengelolaan laman admin
 ├── img/                # File berisi foto-foto
 ├── video/              # File berisi video 
