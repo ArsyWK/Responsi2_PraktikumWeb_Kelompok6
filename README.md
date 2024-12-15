@@ -26,10 +26,11 @@ Fitur-fitur yang disebutkan didukung oleh fitur sign in dan register akun yang d
 ##  File Proyek
 ```
 Responsi2_PraktikumWeb_kelompok6/
-|── admin panel/        # Pengelolaan laman admin
+|── adminpanel/         # Pengelolaan laman admin
 ├── img/                # File berisi foto-foto
 ├── video/              # File berisi video 
 ├── view/               # File laman utama
+├── psg.sql             # File database
 ├── README.md           # Dokumentasi proyek
 ```
 
@@ -44,7 +45,7 @@ Responsi2_PraktikumWeb_kelompok6/
 3. Jalankan Apache dan MySQL melalui Xampp.
 4. Import database menggunakan phpMyAdmin atau command line:
    ```bash
-   mysql -u root -p < database/prakpemweb.sql
+   mysql -u root -p < database/psg.sql
    ```
 5. Akses aplikasi melalui browser di `http://localhost/PSG`.
 6. Jika tidak berhasil, coba jalankan server lokal:
