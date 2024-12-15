@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+/* Header */
+.header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu{
+  display: flex;
+  width: 100%;
+}
+
+#user {
+  color: #000;
+  font-size: 50px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  text-decoration: underline;
+  
+  
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  /* background-color: #f8f8f8; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul li {
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-menu i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Muncul di atas tombol */
+  left: 100%;
+  width: 300px; /* Atur lebar dropdown */
+  background-color: white;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.dropdown ul li {
+  padding: 10px 20px;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block; /* Buat link memenuhi lebar penuh */
+}
+
+.dropdown ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-header {
+  display: grid;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  
+}
+
+.dropdown.show {
+  display: flex;
+}
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-img{
+    width: auto;
+    height: 100px; 
+  }
+
+  .container{
+    display: flex;
+    width: 50%;
+    height: auto;
+    gap: 5px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .container a {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #000;
+    font-weight: bold;
+    color: #fff;
+  }
+  .container a:focus{
+    background-color: red;
+  }
+
+  .artikel a {
+    text-decoration: none;
+    padding: 10px 20px 10px 40px;
+    background-color:#000;
+    color: white;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%); /* Membuat bentuk segiempat miring */
+    transition: 0.3s ease-in-out;
+}
+  .player a {
+    text-decoration: none;
+    padding: 10px 40px 10px 20px;
+    background-color:#000;
+    color: white;
+    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%); 
+    transform: scaleX(-1); /* Membuat clip path miring ke kanan */
+    transition: 0.3s ease-in-out;
+}
+ .container a:hover {
+    background-color: red; /* Ubah warna saat hover */
+    transform: scale(1.05); /* Efek pembesaran */
+}
+    .Jadwal{
+      display: flex;
+      width: 100%;
+      height: auto;
+      gap: 10px;
+      justify-content: center;
+      font-size: 10px;
+      margin: auto;
+      margin-top: 30px;
+}
+
+    .Jadwal a {
+      text-decoration: none;
+      color: #000;
+}
+    .Jadwal a:focus {
+      text-decoration: underline;
+      color: #000;
+}
+
+    .Jadwal h1:focus{
+      text-decoration: underline;
+    }
+    h1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    .periode-container{
+    margin-right: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+    .periode {
+    text-decoration: none;
+    margin-left: 80px;
+    padding: 10px 40px 10px 60px;
+    width: 10%;
+    height: auto;
+    background-color:#000;
+    color: white;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%); /* Membuat bentuk segiempat miring */
+    transition: 0.3s ease-in-out;
+}
+
+.match-date {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  font-style: italic;
+}
+
+    .jadwal-container{
+    margin-left: 60px;
+    margin-right: 50px;
+    padding-bottom: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+    .match-container{
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+    .league {
+      text-decoration: none;
+      padding: 5px 20px 5px 40px;
+      width: 30%;
+      height: auto;
+      background-color: #000;
+      color: white;
+      clip-path: polygon(0% 100%, 70% 100%, 100% 0%, 0% 0%);
+      transition: 0.3s ease-in-out;
+}
+
+    .league h3 {
+      margin-left: 20px;
+    }
+
+  .match-item{
+    display: flex;
+    /* margin: auto; */
+    justify-content: space-between;
+    align-items: center;
+
+
+  }
+
+  .score-container{
+    display: flex;
+    background-color: #000;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    gap: 10px;
+    border-radius: 25px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .match-team{
+    display: flex;
+    gap: 10px;
+    width: 30%;
+    text-align: left;
+    align-items: center;
+  }
+
+  .score-container p{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 2px 10px;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .team-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+    .psg-logo{ 
+    width: auto;
+    height: 16vh;
+    gap: 10px;
+}
+
+/*
+  .manchester-logo{ 
+    width: auto;
+    height: 20vh;
+    gap: 10px;
+
+}
+  .chelsea-logo{ 
+    width: auto;
+    height: 20vh;
+    gap: 10px;
+}
+  .arsenal-logo{ 
+    width: auto;
+    height: 20vh;
+    gap: 10px;
+}
+  .bvb-logo{ 
+    width: auto;
+    height: 25vh;
+    gap: 10px;
+} */
+  .match-team h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+  /* Footer */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  
+  .footer-content {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
+  
+  .footer-logo img {
+    width: 150px;
+    height: auto;
+  }
+
+ .logo-page{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 550px;
+  }
