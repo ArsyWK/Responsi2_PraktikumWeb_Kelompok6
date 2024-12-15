@@ -12,7 +12,7 @@ Terdapat fitur-fitur yang dapat diakses oleh pengguna yaitu:
 - **Jadwal Hasil** berisi mengenai informasi pertandingan yang telah berlalu dan pertandingan yang akan datang.
 - **Pemain** berisi mengenai informasi-informasi mengenai pemain tersebut.
 
-Fitur-fitur yang disebutkan didukung oleh fitur sign in dan register akun yang dapat memberikan hak-hak yang berbeda dengan user yang belum log in
+Fitur-fitur yang disebutkan didukung oleh fitur sign in dan register akun yang dapat memberikan hak-hak yang berbeda dengan user yang belum belum mempunyai akun.
 
 ##  Teknologi yang Digunakan
 - **Frontend**: HTML, CSS, JavaScript
