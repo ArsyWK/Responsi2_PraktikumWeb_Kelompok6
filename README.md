@@ -58,7 +58,7 @@ Responsi2_PraktikumWeb_kelompok6/
 ##  Kolaborator
 1. **Raia Digna Amanada** - H1D023061 
 2. **Arsy Wicaksono** - H1D023111 
-3. **Alya Sellyjuan Rosalina** - H1D023006 
+3. **Sellyjuan Alya Rosalina** - H1D023006 
 
 ---
 
