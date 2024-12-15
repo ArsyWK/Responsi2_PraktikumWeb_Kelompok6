@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+  }
+ /* Header */
+ .header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+    width: 100%;
+}
+
+nav i {
+    color: #000;
+    font-size: 50px;
+}
+
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .nav-menu a:hover {
+    text-decoration: underline;
+    
+    
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-img{
+    width: auto;
+    height: 200px; 
+  }
+  .container{
+    display: flex;
+    width: 50%;
+    height: auto;
+    gap: 5px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .container a {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #000;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .artikel a {
+    text-decoration: none;
+    padding: 10px 20px 10px 40px;
+    background-color:#000;
+    color: white;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%); /* Membuat bentuk segiempat miring */
+    transition: 0.3s ease-in-out;
+}
+  .player a {
+    text-decoration: none;
+    padding: 10px 40px 10px 20px;
+    background-color:#000;
+    color: white;
+    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%); 
+    transform: scaleX(-1); /* Membuat clip path miring ke kanan */
+    transition: 0.3s ease-in-out;
+}
+ a:hover {
+    background-color: red; /* Ubah warna saat hover */
+    transform: scale(1.05); /* Efek pembesaran */
+}
+    .Pemain{
+      display: flex;
+      width: 100%;
+      height: auto;
+      gap: 10px;
+      justify-content: center;
+      font-size: 10px;
+      margin: auto;
+      margin-top: 30px;
+}
+h1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.score-table {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: auto;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.score-box {
+    text-align: center;
+}
+
+.score {
+    font-size: 48px;
+    font-weight: bold;
+    color: red;
+    margin: 0;
+}
+
+.label {
+    font-size: 16px;
+    color: black;
+    margin: 0;
+}
+.psg-icon {
+  margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.picture img {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+.table-container {
+  /* border: 2px solid black; */
+  padding: 55px;
+  background-color:white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  /* border: 2px solid black; */
+}
+
+th, td {
+  border: 5px solid black;
+  padding: 60px;
+  font-weight: bold;
+}
+
+td {
+  padding: 30px;
+}
+
+thead th {
+  /* background-color: black; */
+  color: #000;
+}
+
+tbody td:first-child {
+  /* background-color: black; */
+  color: #000;
+}
+ 
+  /* Footer */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  
+  .footer-content {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
+  
+  .footer-logo img {
+    width: 150px;
+    height: auto;
+  }
+
+ .logo-page{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 550px;
+  }
+  
+  
+  .plus button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    position: fixed;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    position: sticky;
+    /* transform: translate(-20%); */
+}
+/* .plus button:hover {
+    background-color: #0056b3;
+} */
+.form-container {
+    position: fixed;
+    top:40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    }
+
+    .popup-form {
+      position: fixed;
+      top: 0;
+      left: 60%;
+      width: 50%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      display: none;
+    }
+.form-container button#closeFormBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-container input[type="file"],
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  padding: 4px;
+}
+
+
+.form-container button[type="submit"] {
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    }
+
+.date-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.date-inputs input {
+  flex: 1;
+  text-align: center;
+}
+ 
+.plus button{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    margin: auto;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .plus button i {
+    font-size: 24px;
+  }
+
+
+.form-container button#closeFormBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-container input[type="file"],
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="file"] {
+    margin-bottom: 16px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input[type="file"] {
+    padding: 4px;
+  }
+
+  .form-container {
+    width: 250px;
+    margin: 0 auto;
+    left: 85%;
+  }
+  
+  /* form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  } */ 
+  
+  /* Styling for Team Rows */
+  .team-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+  }
+.date-container input[type="text"] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+  /* Styling for Date Row */
+  .date-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .date-row input[type="text"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+  }
+  
+  
+  /* Submit Button */
+  #submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #submit-button:hover {
+    background-color: #0056b3;
+  }
+  .date-inputs {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .date-inputs input {
+    flex: 1;
+    text-align: center;
+  }
+  
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  padding: 4px;
+}
+.form-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.date-inputs input {
+  flex: 1;
+  text-align: center;
+}
