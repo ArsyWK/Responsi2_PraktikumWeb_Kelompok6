@@ -19,49 +19,129 @@ body {
 
   }
   
-  /* Header */
-  .header {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-  }
-  
+ /* Header */
+ .header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 nav{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-menu{
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-nav i {
-    color: #000;
-    font-size: 50px;
+#user {
+  color: #000;
+  font-size: 50px;
 }
 
-  .nav-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  text-decoration: underline;
   
-  .nav-menu a {
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .nav-menu a:hover {
-    text-decoration: underline;
-    
-    
-  }
+  
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  /* background-color: #f8f8f8; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul li {
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-menu i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Muncul di atas tombol */
+  left: 100%;
+  width: 300px; /* Atur lebar dropdown */
+  background-color: white;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.dropdown ul li {
+  padding: 10px 20px;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block; /* Buat link memenuhi lebar penuh */
+}
+
+.dropdown ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-header {
+  display: grid;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  
+}
+
+.dropdown.show {
+  display: flex;
+}
   
   /* Hero Section */
     
@@ -100,7 +180,7 @@ nav i {
 .mvp-section {
   width: 100%;
   height: 100vh;
-  background-image: url("img/sectionn.png"); /* Gambar latar belakang */
+  background-image: url("../img/sectionn.png"); /* Gambar latar belakang */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -119,7 +199,7 @@ nav i {
 .mvp-person img {
   height: 100vh;
   width: auto;
-  /* margin-right: 50px; */
+  margin-left: 70px;
   border-radius: 10px;
 }
 
@@ -127,6 +207,7 @@ nav i {
 .mvp-text {
   color: white;
   text-align: left;
+  margin-left: 100px;
 }
 
 .mvp-text .title {
@@ -135,6 +216,7 @@ nav i {
   color: white;
   margin: 0;
   text-align: left;
+
 }
 
 .mvp-text .player-name {
@@ -182,13 +264,102 @@ nav i {
   }
   .berita-container {
     display: flex;
-    gap: 20px;
-  }
-  
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px 0;
+}
 
-  .card-berita-title {
-    color: red;
-  }
+/* Scrollbar Styling */
+.berita-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.berita-container::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+.berita-container::-webkit-scrollbar-thumb:hover {
+  background: #f0f0f0;
+
+}
+/* .berita-container::-webkit-scrollbar-thumb {
+  background-color: #007bff; 
+  border-radius: 10px; 
+  border: 2px solid #f0f0f0;
+} */
+/* 
+.berita-container::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3; 
+} */
+
+/* .card-berita {
+    min-width: 200px;
+    flex: 0 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+.card-berita {
+  display: flex;
+  flex-direction: column; /* Gambar dan teks ditata secara vertikal */
+  width: 100%; /* Mengatur lebar card sesuai dengan kontainer induknya */
+  max-width: 400px; /* Maksimal lebar 400px, bisa disesuaikan */
+  flex: 0 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-berita img {
+    width: 400px;
+    height: 300px;
+}
+
+.card-berita-desc {
+  overflow: hidden;
+  word-wrap: break-word; 
+}
+
+
+.card-berita-title, .card-berita-desc {
+    padding: 10px;
+}
+
+.card-link {
+  text-decoration: none; /* Menghapus garis bawah */
+  color: inherit; /* Menjaga warna teks tetap sesuai desain */
+}
+
+.card-berita:hover {
+  transform: scale(1.05); /* Menambahkan sedikit efek zoom saat hover */
+  transition: transform 0.3s ease;
+}
+
+
+.btn-carousel {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-carousel button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-carousel button:hover {
+    background-color: #444;
+}
 
   
   /* Gallery Section */
@@ -225,6 +396,8 @@ nav i {
     flex: 1;
     text-align: center;
   }
+
+  
   /* Highlight Section */
   .highlights {
     padding: 20px;
@@ -240,20 +413,30 @@ nav i {
     color: #fff;
     clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
   }
-  .card-highlights{
-    margin-top: 20px;
-  }
-  .card-highlights img{
-    width: 400px;
-    height: 300px;
-  }
 
   .highlights-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
     gap: 20px;
+    /* max-width: 1200px;  */
+    margin: 20px; /* Center-align */
   }
+  
+  .card-highlights {
+    width: auto; /* Sesuaikan dengan kolom grid */
+    height: auto;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-highlights img {
+    width: 100%;
+    height: auto; /* Pastikan gambar tetap proporsional */
+  }
+  
 
   .highlights-item {
     flex: 1;
@@ -267,6 +450,7 @@ nav i {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
   }
   
   .footer-content {
@@ -282,10 +466,49 @@ nav i {
     text-decoration: none;
     color: #fff;
   }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
   
   .footer-logo img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: auto;
   }
 
  .logo-page{
@@ -295,4 +518,3 @@ nav i {
     top: 100px;
     left: 550px;
   }
-  

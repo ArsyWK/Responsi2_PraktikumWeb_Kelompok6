@@ -9,47 +9,127 @@ body {
  
  /* Header */
  .header {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-  }
-  
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 nav{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-menu{
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-nav i {
-    color: #000;
-    font-size: 50px;
+#user {
+  color: #000;
+  font-size: 50px;
 }
 
-  .nav-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  text-decoration: underline;
   
-  .nav-menu a {
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .nav-menu a:hover {
-    text-decoration: underline;
-    
-    
-  }
+  
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  /* background-color: #f8f8f8; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul li {
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-menu i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Muncul di atas tombol */
+  left: 100%;
+  width: 300px; /* Atur lebar dropdown */
+  background-color: white;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.dropdown ul li {
+  padding: 10px 20px;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block; /* Buat link memenuhi lebar penuh */
+}
+
+.dropdown ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-header {
+  display: grid;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  
+}
+
+.dropdown.show {
+  display: flex;
+}
   .logo{
     display: flex;
     justify-content: center;
@@ -57,7 +137,7 @@ nav i {
   }
   .logo-img{
     width: auto;
-    height: 200px; 
+    height: 100px;
   }
   .container{
     display: flex;
@@ -94,10 +174,24 @@ nav i {
     transform: scaleX(-1); /* Membuat clip path miring ke kanan */
     transition: 0.3s ease-in-out;
 }
- a:hover {
+ .container a:hover {
     background-color: red; /* Ubah warna saat hover */
     transform: scale(1.05); /* Efek pembesaran */
 }
+
+.player-id {
+  position: absolute; /* Agar posisi elemen relatif terhadap parent */
+  top: 10px;          /* Atur jarak dari atas */
+  left: 10px;         /* Atur jarak dari kiri */
+  background-color: rgba(0, 0, 0, 0.5); /* Opsional: Tambahkan background transparan */
+  color: white;       /* Warna teks */
+  padding: 5px 10px;  /* Ruang di dalam elemen */
+  border-radius: 5px; /* Tambahkan border radius jika perlu */
+  font-size: 14px;    /* Ukuran font */
+  font-weight: bold;  /* Teks tebal */
+  z-index: 2;         /* Pastikan muncul di atas elemen lain */
+}
+
     .Pemain{
       display: flex;
       width: 100%;
@@ -274,19 +368,19 @@ h1:hover{
 
 }
 
-   /* Footer */
-   .footer {
-    margin-top: 100px;
+  /* Footer */
+  .footer {
     background-color: #000;
     color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
   }
   
   .footer-content {
     display: flex;
-    gap: 20px;
+    gap: 40px;
   }
   
   .footer-content ul {
@@ -297,10 +391,49 @@ h1:hover{
     text-decoration: none;
     color: #fff;
   }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
   
   .footer-logo img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: auto;
   }
 
  .logo-page{
@@ -310,4 +443,3 @@ h1:hover{
     top: 100px;
     left: 550px;
   }
-  

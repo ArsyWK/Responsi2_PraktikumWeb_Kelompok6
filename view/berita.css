@@ -20,47 +20,130 @@ body {
 
   }
   
-  /* Header */
-  .header {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-  }
-  
+ /* Header */
+ .header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 nav{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-menu{
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-nav i {
-    color: #000;
-    font-size: 50px;
+#user {
+  color: #000;
+  font-size: 50px;
 }
 
-  .nav-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  text-decoration: underline;
   
-  .nav-menu a {
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .nav-menu a:hover {
-    text-decoration: underline;
-  }
+  
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  /* background-color: #f8f8f8; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul li {
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-menu i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Muncul di atas tombol */
+  left: 100%;
+  width: 300px; /* Atur lebar dropdown */
+  background-color: white;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.dropdown ul li {
+  padding: 10px 20px;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block; /* Buat link memenuhi lebar penuh */
+}
+
+.dropdown ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-header {
+  display: grid;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  
+}
+
+.dropdown.show {
+  display: flex;
+}
+  
   h1{
     font-family: bebas neue;
     font-size: 50px;
@@ -70,47 +153,67 @@ nav i {
   .berita-terbaru-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Membuat grid dengan 2 kolom */
-    gap: 30px; /* Jarak antar elemen grid */
+    gap: 20px; /* Jarak antar elemen grid */
     justify-content: center; /* Memusatkan grid secara horizontal */
     margin: 0 auto; /* Menempatkan kontainer di tengah halaman */
     padding: 20px;
-    width: 90%; /* Lebar kontainer menyesuaikan layar */
-}
+    width: 80%; /* Lebar kontainer menyesuaikan layar */
+  }
 
-.card-berita-terbaru {
+  .card-berita-terbaru {
+    padding: 0 px;
+    margin: 0;
     text-align: center; /* Memusatkan teks di setiap kartu berita */
     background-color: #fff; /* Warna latar opsional */
-    border: 1px solid #ddd; /* Tambahkan border jika ingin */
-    padding: 10px;
-}
+  }
 
-.card-berita-terbaru img {
+  .card-berita-terbaru img {
     width: 100%; /* Gambar memenuhi lebar elemen kartu */
     height: 300px; /* Tinggi gambar seragam */
     object-fit: cover; /* Memotong gambar agar tetap proporsional */
     border-radius: 5px; /* Opsional: membuat sudut gambar sedikit melengkung */
-}
+  }
 
-.card-berita-terbaru h3, .card-berita-terbaru p {
+  .card-berita-terbaru h3, .card-berita-terbaru p {
     margin: 10px 0;
     word-wrap: break-word; /* Membuat teks panjang tetap di dalam elemen */
     font-size: 16px; /* Ukuran font */
-}
+  }
+
+/* Untuk teks judul */
+  .card-berita-terbaru-text .judul {
+  color: red; /* Ubah warna menjadi merah */
+  font-weight: bold; /* Opsional, untuk menonjolkan teks */
+  text-align: left; /* Pastikan rata kiri */
+  }
+
+/* Untuk nama tim */
+  .card-berita-terbaru-text .tim {
+  color: blue; /* Ubah warna menjadi biru */
+  font-weight: bold; /* Opsional */
+  }
+
+/* Untuk keseluruhan teks dalam card */
+  .card-berita-terbaru-text p {
+  text-align: left; /* Teks rata kiri */
+  margin: 0; /* Hilangkan margin tambahan */
+  padding: 0; /* Hilangkan padding tambahan */
+  }
 
 
    /* Footer */
- .footer {
-    margin-top: 100px;
+   .footer {
     background-color: #000;
     color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
   }
   
   .footer-content {
     display: flex;
-    gap: 20px;
+    gap: 40px;
   }
   
   .footer-content ul {
@@ -121,10 +224,49 @@ nav i {
     text-decoration: none;
     color: #fff;
   }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
   
   .footer-logo img {
-    width: 130px;
-    height: 100px;
+    width: 150px;
+    height: auto;
   }
 
  .logo-page{
@@ -134,6 +276,3 @@ nav i {
     top: 100px;
     left: 550px;
   }
-  
-
-
