@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+/* Global Styles */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -173,8 +174,6 @@ h1:hover{
     font-weight: bold;
     text-align: center;
   }
-  
-  
   /* Footer */
   .footer {
     background-color: #000;
@@ -234,8 +233,10 @@ h1:hover{
 .footer-content > div:last-child ul li a:hover {
   background-color: #e0e0e0; /* Warna latar saat hover */
   color: #007bff; /* Warna ikon saat hover */
+
 }
 
+  
   .footer-logo img {
     width: 150px;
     height: auto;
@@ -248,4 +249,3 @@ h1:hover{
     top: 100px;
     left: 550px;
   }
-  

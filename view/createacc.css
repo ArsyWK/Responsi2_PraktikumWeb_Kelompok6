@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
+
 /* Global Styles */
 body {
     font-family: 'Inter', sans-serif;
@@ -94,7 +95,7 @@ body {
     margin-bottom: 20px;
     margin-top: 10px;
 }
-  
+
   /* Footer */
   .footer {
     background-color: #000;
@@ -170,4 +171,3 @@ body {
     top: 100px;
     left: 550px;
   }
-  

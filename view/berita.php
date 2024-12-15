@@ -1,3 +1,8 @@
+<?php
+ini_set('session.gc_maxlifetime', 3600); // 1 jam
+session_set_cookie_params(3600);
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,160 +13,114 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-       <!-- Header Section -->
+  <!-- Header Section -->
   <header class="header">
-  <div class="logo">
-      <a href="index.php"><img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo"></a>
+    <div class="logo">
+      <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
-      <nav class="nav-menu">
-          <ul>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Pemain</a></li>
-              <li><a href="#">Klub</a></li>
-              <li><a href="#">Berita</a></li>
+
+    <nav class="nav-menu">
+    <ul>
+      <li>
+        <a href="#" id="menu-toggle">Menu</a>
+          <div class="dropdown" id="menu-dropdown">
+            <div>
+              <div class="dropdown-header">
+                Pemain
+              </div>
+                <ul>
+                  <li><a href="firstTeam.php">Pemain</a></li>
+                  <li><a href="pemainGaleri.php">Galeri</a></li>
+                  <li><a href="artikel.php">Artikel</a></li>
+                  <li><a href="prestasipemain.php">Prestasi</a></li>
+                  <li><a href="firstTeam.php">Tim Pertama</a></li>
+                  <li><a href="pemainWanita.php">Tim Wanita</a></li>
+                </ul>
+            </div>
+          <div>
+            <div class="dropdown-header">Tentang Klub</div>
+            <ul>
+              <li><a href="klub.php">Sejarah</a></li>
+              <li><a href="berita.php">Berita</a></li>
             </ul>
-            <i class='bx bxs-user-circle'></i>
-        </nav>
-    </header>
+          </div>
+    </div>
+</li>
+
+        <li><a href="firstTeam.php">Pemain</a></li>
+        <li><a href="klub.php">Klub</a></li>
+        <li><a href="berita.php">Berita</a></li>
+      </ul>
+      <?php
+      $is_logged_in = isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']; // Periksa status login
+      ?>
+      <a href="<?php echo $is_logged_in ? 'SettingAccount.php' : 'signin.php'; ?>">
+      <i id="user" class='bx bxs-user-circle'></i>
+      </a>
+    </nav>
+  </header>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuDropdown = document.getElementById('menu-dropdown');
+
+  // Fungsi untuk menampilkan/menyembunyikan dropdown
+  menuToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    menuDropdown.classList.toggle('show'); // Tambahkan/lepaskan kelas "show"
+  });
+
+  // Menutup dropdown jika klik di luar elemen
+  document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !menuDropdown.contains(e.target)) {
+      menuDropdown.classList.remove('show');
+    }
+  });
+});
+  </script>
+
 
     <h1>Berita Terbaru</h1>
     <!-- Berita Terbaru Section -->
-    <section class="berita-terbaru-container">
+    <?php
+    include 'koneksi.php'; // Sambungkan ke database
 
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>| Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-      <div class="card-berita-terbaru">
-        <img src="../img/psg1.jpg" alt="Berita Terbaru 1">
-        <div class="card-berita-terbaru-text">
-            <div class="card-berita-terbaru-title">
-                <p>Kylian Mbappe</p>
-            </div>
-            <div class="card-berita-terbaru-desc">
-                <p>Penyerang <span>|  Paris Saint-Germain</span></p>
-            </div>
-        </div>
-      </div>
-    </section>
+    $sql_berita = "SELECT id_berita,judul, tim, tanggal, gambar FROM berita ORDER BY tanggal DESC LIMIT 10"; // Batasi jumlah berita
+    $result_berita = $conn->query($sql_berita);
 
+    $berita = [];
+    if ($result_berita->num_rows > 0) {
+        while ($row = $result_berita->fetch_assoc()) {
+            $berita[] = $row;
+        }
+    }
+    ?>
+
+    
+<section class="berita-terbaru-container">
+    <?php foreach ($berita as $item): ?>
+      <a href="beritabook.php?id_berita=<?= $item['id_berita']; ?>" class="card-berita-terbaru">
+        <div class="card-berita-terbaru">
+            <!-- Menampilkan gambar berita -->
+            <img src="data:image/jpeg;base64,<?= base64_encode($item['gambar']); ?>" alt="<?= $item['judul']; ?>">
+            
+            <!-- Menampilkan teks berita -->
+            <div class="card-berita-terbaru-text">
+                <div class="card-berita-terbaru-title">
+                    <p class="judul"><?= $item['judul']; ?></p>
+                </div>
+                <div class="card-berita-terbaru-desc">
+                <p>
+                  <span class="tim"><?= $item['tim']; ?></span> | 
+                  <span class="tanggal"><?= date('d F Y', strtotime($item['tanggal'])); ?></span>
+                </p>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</section>
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -169,17 +128,16 @@
       <div>
         <h3>Paris Saint Germain</h3>
         <ul>
-          <li><a href="#">Tim Pertama</a></li>
-          <li><a href="#">Tim Wanita</a></li>
-          <li><a href="#">Tentang Klub</a></li>
+          <li><a href="firstTeam.php">Tim Pertama</a></li>
+          <li><a href="pemainWanita.php">Tim Wanita</a></li>
+          <li><a href="klub.php">Tentang Klub</a></li>
         </ul>
       </div>
       <div>
         <h3>Servis</h3>
         <ul>
-          <li><a href="#">Akun</a></li>
-          <li><a href="#">Tiket</a></li>
-          <li><a href="#">Market</a></li>
+          <li><a href="SettingAccount.php">Akun</a></li>
+          <li><a href="feedback.php">Berikan Feedback</a></li>
         </ul>
       </div>
       <div>
@@ -218,4 +176,3 @@
     </div>
   </footer>
 </body>
-</html>

@@ -10,47 +10,127 @@ body {
  
  /* Header */
  .header {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-  }
-  
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 nav{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-menu{
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-nav i {
-    color: #000;
-    font-size: 50px;
+#user {
+  color: #000;
+  font-size: 50px;
 }
 
-  .nav-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  text-decoration: underline;
   
-  .nav-menu a {
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .nav-menu a:hover {
-    text-decoration: underline;
-    
-    
-  }
+  
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  /* background-color: #f8f8f8; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul li {
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-menu i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Muncul di atas tombol */
+  left: 100%;
+  width: 300px; /* Atur lebar dropdown */
+  background-color: white;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.dropdown ul li {
+  padding: 10px 20px;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block; /* Buat link memenuhi lebar penuh */
+}
+
+.dropdown ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-header {
+  display: grid;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  
+}
+
+.dropdown.show {
+  display: flex;
+}
   .logo{
     display: flex;
     justify-content: center;
@@ -58,7 +138,7 @@ nav i {
   }
   .logo-img{
     width: auto;
-    height: 200px; 
+    height: 100px;
   }
   .container{
     display: flex;
@@ -86,6 +166,10 @@ nav i {
     clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%); /* Membuat bentuk segiempat miring */
     transition: 0.3s ease-in-out;
 }
+
+  .prestasi a{
+    background-color: red;
+  }
   .player a {
     text-decoration: none;
     padding: 10px 40px 10px 20px;
@@ -95,9 +179,12 @@ nav i {
     transform: scaleX(-1); /* Membuat clip path miring ke kanan */
     transition: 0.3s ease-in-out;
 }
- a:hover {
+ .container a:hover {
     background-color: red; /* Ubah warna saat hover */
     transform: scale(1.05); /* Efek pembesaran */
+}
+.container a:active {
+  background-color: red;
 }
     .Pemain{
       display: flex;
@@ -108,6 +195,13 @@ nav i {
       font-size: 10px;
       margin: auto;
       margin-top: 30px;
+}
+.Pemain a{
+  text-decoration: none;
+  color: #000;
+}
+.Pemain a:active{
+  text-decoration: underline;
 }
 h1:hover{
     text-decoration: underline;
@@ -190,8 +284,7 @@ tbody td:first-child {
   /* background-color: black; */
   color: #000;
 }
-  
- 
+
   /* Footer */
   .footer {
     background-color: #000;
@@ -253,6 +346,8 @@ tbody td:first-child {
   color: #007bff; /* Warna ikon saat hover */
 
 }
+
+  
   .footer-logo img {
     width: 150px;
     height: auto;
@@ -265,5 +360,4 @@ tbody td:first-child {
     top: 100px;
     left: 550px;
   }
-  
   

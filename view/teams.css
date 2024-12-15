@@ -8,49 +8,130 @@ body {
     font-family: "Oswald", sans-serif;
   }
  
+
  /* Header */
  .header {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-  }
-  
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 nav{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-menu{
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-nav i {
-    color: #000;
-    font-size: 50px;
+#user {
+  color: #000;
+  font-size: 50px;
 }
 
-  .nav-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  text-decoration: underline;
   
-  .nav-menu a {
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .nav-menu a:hover {
-    text-decoration: underline;
-    
-    
-  }
+  
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  /* background-color: #f8f8f8; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul li {
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-menu i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Muncul di atas tombol */
+  left: 100%;
+  width: 300px; /* Atur lebar dropdown */
+  background-color: white;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.dropdown ul li {
+  padding: 10px 20px;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block; /* Buat link memenuhi lebar penuh */
+}
+
+.dropdown ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-header {
+  display: grid;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  
+}
+
+.dropdown.show {
+  display: flex;
+}
   .logo{
     display: flex;
     justify-content: center;
@@ -58,7 +139,7 @@ nav i {
   }
   .logo-img{
     width: auto;
-    height: 200px; 
+    height: 100px;
   }
   .container{
     display: flex;
@@ -99,6 +180,20 @@ nav i {
     background-color: red; /* Ubah warna saat hover */
     transform: scale(1.05); /* Efek pembesaran */
 }
+
+.player-id {
+  position: absolute; /* Agar posisi elemen relatif terhadap parent */
+  top: 10px;          /* Atur jarak dari atas */
+  left: 10px;         /* Atur jarak dari kiri */
+  background-color: rgba(0, 0, 0, 0.5); /* Opsional: Tambahkan background transparan */
+  color: white;       /* Warna teks */
+  padding: 5px 10px;  /* Ruang di dalam elemen */
+  border-radius: 5px; /* Tambahkan border radius jika perlu */
+  font-size: 14px;    /* Ukuran font */
+  font-weight: bold;  /* Teks tebal */
+  z-index: 2;         /* Pastikan muncul di atas elemen lain */
+}
+
     .Pemain{
       display: flex;
       width: 100%;
@@ -108,7 +203,21 @@ nav i {
       font-size: 10px;
       margin: auto;
       margin-top: 30px;
+     
 }
+.Pemain a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container a h1:focus{
+  background-color: red;
+}
+
+.Pemain a h1:focus {
+  background-color: red;
+}
+
 h1:hover{
     text-decoration: underline;
     cursor: pointer;
@@ -274,7 +383,7 @@ h1:hover{
   margin-left: 25px;
 
 }
- 
+
   /* Footer */
   .footer {
     background-color: #000;
@@ -336,6 +445,8 @@ h1:hover{
   color: #007bff; /* Warna ikon saat hover */
 
 }
+
+  
   .footer-logo img {
     width: 150px;
     height: auto;
@@ -348,4 +459,3 @@ h1:hover{
     top: 100px;
     left: 550px;
   }
-  

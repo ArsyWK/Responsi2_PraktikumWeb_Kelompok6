@@ -1,3 +1,16 @@
+<?php
+ini_set('session.gc_maxlifetime', 3600); // 1 jam
+session_set_cookie_params(3600);
+session_start();
+include 'koneksi.php'; // Hubungkan ke database
+
+// Ambil data pemain berdasarkan posisi Attacker
+$query = "SELECT * FROM pemain WHERE posisi = 'Attacker'";
+$result = mysqli_query($conn, $query);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,34 +21,90 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <!-- Header Section -->
+  <!-- Header Section -->
   <header class="header">
-      <nav class="nav-menu">
-          <ul>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Pemain</a></li>
-              <li><a href="#">Klub</a></li>
-              <li><a href="#">Berita</a></li>
-            </ul>
-            <i class='bx bxs-user-circle'></i>
-        </nav>
-    </header>
     <div class="logo">
       <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
 
+    <nav class="nav-menu">
+    <ul>
+      <li>
+        <a href="#" id="menu-toggle">Menu</a>
+          <div class="dropdown" id="menu-dropdown">
+            <div>
+              <div class="dropdown-header">
+                Pemain
+              </div>
+                <ul>
+                  <li><a href="firstTeam.php">Pemain</a></li>
+                  <li><a href="pemainGaleri.php">Galeri</a></li>
+                  <li><a href="artikel.php">Artikel</a></li>
+                  <li><a href="prestasipemain.php">Prestasi</a></li>
+                  <li><a href="firstTeam.php">Tim Pertama</a></li>
+                  <li><a href="pemainWanita.php">Tim Wanita</a></li>
+                </ul>
+            </div>
+          <div>
+            <div class="dropdown-header">Tentang Klub</div>
+            <ul>
+              <li><a href="klub.php">Sejarah</a></li>
+              <li><a href="berita.php">Berita</a></li>
+            </ul>
+          </div>
+    </div>
+</li>
+
+        <li><a href="firstTeam.php">Pemain</a></li>
+        <li><a href="klub.php">Klub</a></li>
+        <li><a href="berita.php">Berita</a></li>
+      </ul>
+      <?php
+      $is_logged_in = isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']; // Periksa status login
+      ?>
+      <a href="<?php echo $is_logged_in ? 'SettingAccount.php' : 'signin.php'; ?>">
+      <i id="user" class='bx bxs-user-circle'></i>
+      </a>
+    </nav>
+  </header>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuDropdown = document.getElementById('menu-dropdown');
+
+  // Fungsi untuk menampilkan/menyembunyikan dropdown
+  menuToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    menuDropdown.classList.toggle('show'); // Tambahkan/lepaskan kelas "show"
+  });
+
+  // Menutup dropdown jika klik di luar elemen
+  document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !menuDropdown.contains(e.target)) {
+      menuDropdown.classList.remove('show');
+    }
+  });
+});
+  </script>
+
+    <div class="logo">
+      <a href="index.php"><img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo"></a>
+    </div>
+
     <div class="container">
        <div class="artikel">
-            <a href="#">Artikel</a>
+            <a href="artikel.php">Artikel</a>
        </div>
        <div class="prestasi">
-            <a href="#">Prestasi</a>
+            <a href="prestasipemain.php">Prestasi</a>
        </div>
        <div class="galeri">
-            <a href="#">Galeri</a>
+            <a href="pemainGaleri.php">Galeri</a>
        </div>
        <div class="jadwal">
-            <a href="#">Jadwal Hasil</a>
+            <a href="jadwalHasilLalu.php">Jadwal Hasil</a>
        </div>
        <div class="player">
             <a href="#">Player</a>
@@ -44,586 +113,86 @@
 
     <div class="Pemain">
         <div>
-            <h1>Tim Pertama</h1>
+            <a href="firstTeam.php"><h1>Tim Pertama</h1></a>
         </div>
         <div>
-            <h1>Tim Wanita</h1>
+            <a href="pemainWanita.php"><h1>Tim Wanita</h1></a>
         </div>
     </div>
 
-    <h2 class="position">Attacker</h2>
+    <?php
+include 'koneksi.php'; // Hubungkan ke database
 
-    <div class="player-container">
+$positions = ['Attacker', 'Defender', 'Midfielder', 'Goalkeeper'];
 
-    <div class="card-container">
-        <div class="card">
-            <div class="image-container">
-                <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+foreach ($positions as $position) {
+    echo "<h2 class='position'>$position</h2>";
+    $query = "SELECT * FROM pemain WHERE posisi = '$position'";
+    $result = mysqli_query($conn, $query);
 
+    echo "<div class='player-container'>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Konversi foto dari BLOB ke base64
+        $foto = base64_encode($row['foto']);
 
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
+        echo "
+            <div class='card-container'>
+                <a href='biopemain.php?id_pemain={$row['id_pemain']}' class='card-link'> <!-- Tambahkan link -->
+                    <div class='card'>
+                        <div class='image-container'>
+                            <img src='data:image/png;base64,{$foto}' alt='Player Image' class='player-image'>
+                            <div class='player-name-overlay'>
+                                <h2>{$row['posisi']}</h2>
+                                <p>{$row['nama']}</p>
+                            </div>
+                            <div class='stats-container'>
+                                <div class='stats-1'>";
 
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
+        // Cek jika posisi adalah Goalkeeper
+        if ($row['posisi'] == 'Goalkeeper') {
+            echo "
+                                    <div class='clean-sheet'>
+                                        <h3>Clean Sheet</h3>
+                                        <p>{$row['clean']}</p>
+                                    </div>
+                                    <div class='saves'>
+                                        <h3>Saves</h3>
+                                        <p>{$row['saves']}</p>
+                                    </div>";
+        } else { // Untuk posisi selain Goalkeeper
+            echo "
+                                    <div class='play'>
+                                        <h3>Permainan</h3>
+                                        <p>{$row['permainan']}</p>
+                                    </div>
+                                    <div class='goal'>
+                                        <h3>Gol</h3>
+                                        <p>{$row['gol']}</p>
+                                    </div>";
+        }
 
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
+        echo "              </div>
+                                <div class='stats-2'>";
+        if ($row['posisi'] == 'Goalkeeper') {
+            echo "
+                                    <h3>Permainan</h3>
+                                    <p>{$row['permainan']}</p>";
+        } else {
+            echo "
+                                    <h3>Assist</h3>
+                                    <p>{$row['assist']}</p>";
+        }
+        echo "              </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-    
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-    </div>
-
-
-   
-    <h2 class="position">Defender</h2>
-
-    <div class="player-container">  
-    <div class="card-container">
-        <div class="card">
-            <div class="image-container">
-                <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="image-container">
-                    <img src="../img/pemain.png" alt="Player Image" class="player-image">
-                    <div class="player-name-overlay">
-                    <h2>Gelandang</h2>
-                    <p>Jonna P. Diddy</p>
-                    </div>
-                <div class="stats-container">
-                    <div class="stats-1">
-                        <div class="play">
-                            <h3>Permainan</h3>
-                            <p>30</p>
-                        </div>
-                        <div class="goal">
-                            <h3>Gol</h3>
-                            <p>5</p>
-                        </div>
-                    </div>
-                    <div class="stats-2">
-                        <h3>Assist</h3>
-                        <p>2</p>
-                    </div>
-                </div>
-                </div>
-            </div>   
-        </div>
-    </div>
-    </div>
-   
+                </a> <!-- Link berakhir -->
+            </div>";
+    }
+    echo "</div>";
+}
+mysqli_close($conn);
+?>
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -631,17 +200,16 @@
       <div>
         <h3>Paris Saint Germain</h3>
         <ul>
-          <li><a href="#">Tim Pertama</a></li>
-          <li><a href="#">Tim Wanita</a></li>
-          <li><a href="#">Tentang Klub</a></li>
+          <li><a href="firstTeam.php">Tim Pertama</a></li>
+          <li><a href="pemainWanita.php">Tim Wanita</a></li>
+          <li><a href="klub.php">Tentang Klub</a></li>
         </ul>
       </div>
       <div>
         <h3>Servis</h3>
         <ul>
-          <li><a href="#">Akun</a></li>
-          <li><a href="#">Tiket</a></li>
-          <li><a href="#">Market</a></li>
+          <li><a href="SettingAccount.php">Akun</a></li>
+          <li><a href="feedback.php">Berikan Feedback</a></li>
         </ul>
       </div>
       <div>

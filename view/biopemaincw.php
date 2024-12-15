@@ -2,37 +2,35 @@
 ini_set('session.gc_maxlifetime', 3600); // 1 jam
 session_set_cookie_params(3600);
 session_start();
-include 'koneksi.php'; // Pastikan koneksi database Anda sudah benar
+include 'koneksi.php'; // Hubungkan ke database
 
-// Cek apakah parameter 'id' ada di URL
-if (isset($_GET['id_berita'])) {
-    $id_berita = $_GET['id_berita'];
+// Cek apakah ID pemain dikirim melalui URL
+if (isset($_GET['id_pemaincw'])) {
+    $id_pemaincw = $_GET['id_pemaincw'];
 
-    // Ambil berita berdasarkan ID
-    $sql = "SELECT judul, tim, tanggal, isi, gambar FROM berita WHERE id_berita = $id_berita";
-    $result = $conn->query($sql);
+    // Ambil data pemain dari database berdasarkan ID
+    $query = "SELECT * FROM pemaincewe WHERE id_pemaincw = $id_pemaincw";
+    $result = mysqli_query($conn, $query);
 
-    if ($result->num_rows > 0) {
-        $berita = $result->fetch_assoc();
+    if ($result && mysqli_num_rows($result) > 0) {
+        $pemain = mysqli_fetch_assoc($result);
     } else {
-        echo "Berita tidak ditemukan.";
+        echo "Pemain tidak ditemukan.";
         exit;
     }
 } else {
-    echo "ID berita tidak ditemukan.";
+    echo "ID pemain tidak valid.";
     exit;
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita Book</title>
-    <link rel="stylesheet" href="beritaBook.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Biografi Pemain</title>
+    <link rel="stylesheet" href="biopemain.css">
 </head>
 <body>
   <!-- Header Section -->
@@ -72,7 +70,6 @@ if (isset($_GET['id_berita'])) {
         <li><a href="firstTeam.php">Pemain</a></li>
         <li><a href="klub.php">Klub</a></li>
         <li><a href="berita.php">Berita</a></li>
-        
       </ul>
       <?php
       $is_logged_in = isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']; // Periksa status login
@@ -104,21 +101,32 @@ if (isset($_GET['id_berita'])) {
 });
   </script>
 
-
-    <div class="news-title">
-        <h1><?= $berita['judul']; ?></h1>
-        <p><?= date('d F Y', strtotime($berita['tanggal'])); ?></p>
-    </div>
-        <i class='bx bx-bookmarks'></i>
-
-    <div class="news-image">
-        <img src="data:image/jpeg;base64,<?= base64_encode($berita['gambar']); ?>" alt="News Image">
-    </div>
-    <div class="news-content">
-        <p>
-            <span> Jakarta, PSG.COM </span>
-            <?= nl2br($berita['isi']); ?>
-        </p>
+    
+    <!-- Biografi Pemain -->
+    <div class="view-player">
+        <div class="player-card">
+            <img src="data:image/png;base64,<?php echo base64_encode($pemain['foto']); ?>" alt="Pemain" class="player-image">
+            <div class="player-info">
+                <div class="position-stats">
+                    <h2 class="position"><?php echo $pemain['posisi']; ?></h2>
+                    <h2 class="stats"><?php echo $pemain['bb/tb']; ?></h2>
+                </div>
+                <table class="details">
+                    <tr>
+                        <td>Nama</td>
+                        <td>: <?php echo $pemain['nama']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td>: <?php echo $pemain['tanggal_lahir']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Asal</td>
+                        <td>: <?php echo $pemain['asal']; ?></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 
   <!-- Footer Section -->

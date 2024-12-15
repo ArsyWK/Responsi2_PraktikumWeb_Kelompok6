@@ -1,74 +1,139 @@
+<?php
+include 'koneksi.php'; // File koneksi database
+
+// Query untuk mengambil data dari tabel prestasi
+$sql = "SELECT nama, skor FROM prestasi";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestasi Pemain</title>
-    <link rel="stylesheet" href="prestasi.css">
+    <link rel="stylesheet" href="prestasi.css?v=<?php echo time();?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <!-- Header Section -->
+  <!-- Header Section -->
   <header class="header">
-      <nav class="nav-menu">
-          <ul>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Pemain</a></li>
-              <li><a href="#">Klub</a></li>
-              <li><a href="#">Berita</a></li>
-            </ul>
-            <i class='bx bxs-user-circle'></i>
-        </nav>
-    </header>
     <div class="logo">
       <img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
 
+    <nav class="nav-menu">
+    <ul>
+      <li>
+        <a href="#" id="menu-toggle">Menu</a>
+          <div class="dropdown" id="menu-dropdown">
+            <div>
+              <div class="dropdown-header">
+                Pemain
+              </div>
+                <ul>
+                  <li><a href="firstTeam.php">Pemain</a></li>
+                  <li><a href="pemainGaleri.php">Galeri</a></li>
+                  <li><a href="artikel.php">Artikel</a></li>
+                  <li><a href="prestasipemain.php">Prestasi</a></li>
+                  <li><a href="firstTeam.php">Tim Pertama</a></li>
+                  <li><a href="pemainWanita.php">Tim Wanita</a></li>
+                </ul>
+            </div>
+          <div>
+            <div class="dropdown-header">Tentang Klub</div>
+            <ul>
+              <li><a href="klub.php">Sejarah</a></li>
+              <li><a href="berita.php">Berita</a></li>
+            </ul>
+          </div>
+    </div>
+</li>
+
+        <li><a href="firstTeam.php">Pemain</a></li>
+        <li><a href="klub.php">Klub</a></li>
+        <li><a href="berita.php">Berita</a></li>
+      </ul>
+      <?php
+      session_start();
+      $is_logged_in = isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']; // Periksa status login
+      ?>
+      <a href="<?php echo $is_logged_in ? 'SettingAccount.php' : 'signin.php'; ?>">
+      <i id="user" class='bx bxs-user-circle'></i>
+      </a>
+    </nav>
+  </header>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuDropdown = document.getElementById('menu-dropdown');
+
+  // Fungsi untuk menampilkan/menyembunyikan dropdown
+  menuToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    menuDropdown.classList.toggle('show'); // Tambahkan/lepaskan kelas "show"
+  });
+
+  // Menutup dropdown jika klik di luar elemen
+  document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !menuDropdown.contains(e.target)) {
+      menuDropdown.classList.remove('show');
+    }
+  });
+});
+  </script>
+<div class="logo">
+      <a href="index.php"><img class="logo-img" src="../img/Logo-PSG.png" alt="PSG Logo"></a>
+    </div>
+
     <div class="container">
        <div class="artikel">
-            <a href="#">Artikel</a>
+            <a href="artikel.php">Artikel</a>
        </div>
        <div class="prestasi">
-            <a href="#">Prestasi</a>
+            <a href="prestasipemain.php">Prestasi</a>
        </div>
        <div class="galeri">
-            <a href="#">Galeri</a>
+            <a href="pemainGaleri.php">Galeri</a>
        </div>
        <div class="jadwal">
-            <a href="#">Jadwal Hasil</a>
+            <a href="jadwalHasilLalu.php">Jadwal Hasil</a>
        </div>
        <div class="player">
-            <a href="#">Player</a>
+            <a href="firstTeam.php">Player</a>
        </div>
     </div>
 
     <div class="Pemain">
         <div>
-            <h1>Tim Pertama</h1>
+            <a href="firstTeam.php"><h1>Tim Pertama</h1></a>
         </div>
         <div>
-            <h1>Tim Wanita</h1>
+            <a href="pemainWanita.php"><h1>Tim Wanita</h1></a>
         </div>
     </div>
 
     <div class="score-table">
+        <?php
+        // Periksa apakah query mengembalikan data
+        if ($result->num_rows > 0):
+            while ($row = $result->fetch_assoc()):
+        ?>
         <div class="score-box">
-            <p class="score">60</p>
-            <p class="label">Tournament Perancis</p>
+            <p class="score"><?= htmlspecialchars($row['skor']); ?></p>
+            <p class="label"><?= htmlspecialchars($row['nama']); ?></p>
         </div>
-        <div class="score-box">
-            <p class="score">60</p>
-            <p class="label">GBK</p>
-        </div>
-        <div class="score-box">
-            <p class="score">60</p>
-            <p class="label">INFORMATICS ARMY</p>
-        </div>
-        <div class="score-box">
-            <p class="score">80</p>
-            <p class="label">PORSOED</p>
-        </div>
-    </div>   
+        <?php
+            endwhile;
+        else:
+        ?>
+        <p>Tidak ada data skor tersedia.</p>
+        <?php
+        endif;
+        $conn->close();
+        ?>
+    </div>
 
     <div class="picture">
         <img class="psg-icon" src="../img/image 20.png" alt="Psg Logo">
@@ -79,41 +144,42 @@
       <thead>
         <tr>
           <th>Tournament Perancis</th>
-          <th>8-0</th>
-          <th>8-0</th>
-          <th>8-0</th>
-          <th>8-0</th>
-          <th>8-0</th>
+          <th>8-6</th>
+          <th>4-3</th>
+          <th>2-6</th>
+          <th>2-0</th>
+          <th>1-3</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>GBK</td>
-          <td>8-0</td>
-          <td>8-0</td>
-          <td>8-0</td>
-          <td>8-0</td>
-          <td>8-0</td>
+          <td>Champions Trophy</td>
+          <td>2-3</td>
+          <td>3-1</td>
+          <td>2-0</td>
+          <td>1-0</td>
+          <td>1-4</td>
         </tr>
         <tr>
-          <td>INFORMATICS ARMY</td>
-          <td>8-0</td>
-          <td>8-0</td>
-          <td>8-0</td>
-          <td>8-0</td>
-          <td>8-0</td>
+          <td>Uefa Champions League</td>
+          <td>3-0</td>
+          <td>0-1</td>
+          <td>4-2</td>
+          <td>0-2</td>
+          <td>4-1</td>
         </tr>
         <tr>
-          <td>PORSOED</td>
-          <td>8-0</td>
-          <td>8-0</td>
-          <td>8-0</td>
-          <td>8-0</td>
-          <td>8-0</td>
+          <td>Liga 1</td>
+          <td>3-2</td>
+          <td>2-3</td>
+          <td>1-0</td>
+          <td>2-3</td>
+          <td>1-2</td>
         </tr>
       </tbody>
     </table>
   </div>
+
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -121,17 +187,16 @@
       <div>
         <h3>Paris Saint Germain</h3>
         <ul>
-          <li><a href="#">Tim Pertama</a></li>
-          <li><a href="#">Tim Wanita</a></li>
-          <li><a href="#">Tentang Klub</a></li>
+          <li><a href="firstTeam.php">Tim Pertama</a></li>
+          <li><a href="pemainWanita.php">Tim Wanita</a></li>
+          <li><a href="klub.php">Tentang Klub</a></li>
         </ul>
       </div>
       <div>
         <h3>Servis</h3>
         <ul>
-          <li><a href="#">Akun</a></li>
-          <li><a href="#">Tiket</a></li>
-          <li><a href="#">Market</a></li>
+          <li><a href="SettingAccount.php">Akun</a></li>
+          <li><a href="feedback.php">Berikan Feedback</a></li>
         </ul>
       </div>
       <div>
@@ -169,5 +234,7 @@
       <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </div>
   </footer>
+
+
 </body>
 </html>

@@ -1,3 +1,8 @@
+<?php
+ini_set('session.gc_maxlifetime', 3600); // 1 jam
+session_set_cookie_params(3600);
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +15,7 @@
     
     <!-- header -->
     <header class="header">
-     <a href="index.php"><img src="../img/Logo-PSG.png" alt="PSG Logo"></a>
+     <img src="../img/Logo-PSG.png" alt="PSG Logo">
     </header>
 
     <div class="container">
@@ -31,11 +36,57 @@
             <label for="confirm-password">Konfirmasi Password</label>
             <input type="password" id="confirm-password" name="confirm-password" placeholder="Masukkan password kembali" required>
 
-            <a href="signin.php"><button type="submit">Sign in</button></a>
+            <button type="submit">Sign in</button>
             </form>
 
         </div>
     </div>
+    <?php
+    include 'koneksi.php';
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = trim($_POST['name']);
+        $email = trim($_POST['email']);
+        $password = trim($_POST['password']);
+        $confirm_password = trim($_POST['confirm-password']);
+
+        // Validasi input tidak kosong
+        if (empty($name) || empty($email) || empty($password) || empty($confirm_password)) {
+            echo "<script>alert('Semua field harus diisi!'); window.history.back();</script>";
+            exit();
+        }
+
+        // Validasi format email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "<script>alert('Format email tidak valid!'); window.history.back();</script>";
+            exit();
+        }
+
+        // Validasi password
+        if ($password !== $confirm_password) {
+            echo "<script>alert('Password tidak cocok!'); window.history.back();</script>";
+            exit();
+        }
+
+        // Enkripsi password
+        $password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        // Query menggunakan prepared statement
+        $stmt = $conn->prepare("INSERT INTO user (nama, email, password) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $email, $password_hash);
+
+        if ($stmt->execute()) {
+            echo "<script>alert('Registrasi berhasil!'); window.location.href='signin.php';</script>";
+        } else {
+            echo "<script>alert('Registrasi gagal: " . $stmt->error . "'); window.history.back();</script>";
+        }
+
+        // Tutup statement
+        $stmt->close();
+    }
+?>
+
+       
 
 
   <!-- Footer Section -->
@@ -44,17 +95,16 @@
       <div>
         <h3>Paris Saint Germain</h3>
         <ul>
-          <li><a href="#">Tim Pertama</a></li>
-          <li><a href="#">Tim Wanita</a></li>
-          <li><a href="#">Tentang Klub</a></li>
+          <li><a href="firstTeam.php">Tim Pertama</a></li>
+          <li><a href="pemainWanita.php">Tim Wanita</a></li>
+          <li><a href="klub.php">Tentang Klub</a></li>
         </ul>
       </div>
       <div>
         <h3>Servis</h3>
         <ul>
-          <li><a href="#">Akun</a></li>
-          <li><a href="#">Tiket</a></li>
-          <li><a href="#">Market</a></li>
+          <li><a href="SettingAccount.php">Akun</a></li>
+          <li><a href="feedback.php">Berikan Feedback</a></li>
         </ul>
       </div>
       <div>
