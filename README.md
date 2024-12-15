@@ -11,6 +11,7 @@ Terdapat fitur-fitur yang dapat diakses oleh pengguna yaitu:
 - **Prestasi** berisi mengenai  kemenangan yang diraih oleh PSG pada pertandingan.
 - **Jadwal Hasil** berisi mengenai informasi pertandingan yang telah berlalu dan pertandingan yang akan datang.
 - **Pemain** berisi mengenai informasi-informasi mengenai pemain tersebut.
+- **Feedback** survey kepuasan pengguna terhadap fitur dan layanan website
 
 Fitur-fitur yang disebutkan didukung oleh fitur sign in dan register akun yang dapat memberikan hak-hak yang berbeda dengan user yang belum belum mempunyai akun.
 
