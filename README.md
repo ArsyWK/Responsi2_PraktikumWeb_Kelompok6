@@ -18,7 +18,7 @@ Fitur-fitur yang disebutkan didukung oleh fitur sign in dan register akun yang d
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: PHP
 - **Database**: MySQL
-- **Tools**: Visual Studio Code, Git
+- **Tools**: Visual Studio Code, Git, Xampp
 
 
 
@@ -39,8 +39,8 @@ Bombakar/
    ```bash
    git clone https://github.com/ArsyWK/Responsi2_PraktikumWeb_kelompok6
    ```
-2. Pindahkan folder project ke dalam folder `www` di Laragon.
-3. Jalankan Apache dan MySQL melalui Laragon.
+2. Pindahkan folder project ke dalam folder `htdocs` di Xampp.
+3. Jalankan Apache dan MySQL melalui Xampp.
 4. Import database menggunakan phpMyAdmin atau command line:
    ```bash
    mysql -u root -p < database/prakpemweb.sql
