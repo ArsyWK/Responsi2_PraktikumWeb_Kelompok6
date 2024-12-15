@@ -1,0 +1,973 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .logo-img{
+    width: auto;
+    height: 100px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+  }
+  
+ /* Header */
+ .header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu{
+  display: flex;
+  width: 100%;
+}
+
+#user {
+  color: #000;
+  font-size: 50px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  text-decoration: underline;
+  
+  
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  /* background-color: #f8f8f8; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu ul li {
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-menu i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Muncul di atas tombol */
+  left: 100%;
+  width: 300px; /* Atur lebar dropdown */
+  background-color: white;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.dropdown ul li {
+  padding: 10px 20px;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block; /* Buat link memenuhi lebar penuh */
+}
+
+.dropdown ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-header {
+  display: grid;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  
+}
+
+.dropdown.show {
+  display: flex;
+}
+  
+  /* Hero Section */
+    
+
+  video{
+    background-size: cover;
+    opacity: 0.9;
+    filter: brightness(30%) ;
+    z-index: -1;
+    background-color: #000;
+}
+
+  .hero-text h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    letter-spacing: 10px;
+    top: 50%;
+    left: 50%;
+    font-weight: 1000;
+  }
+  
+  .hero-text p {
+    font-size: 24px;
+    position: absolute;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+    font-weight: 500;
+  }
+
+  /* Bagian utama section */
+.mvp-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/sectionn.png"); /* Gambar latar belakang */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-mvp {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  width: 100%;
+}
+
+/* Bagian gambar pemain */
+.mvp-person img {
+  height: 100vh;
+  width: auto;
+  margin-left: 70px;
+  border-radius: 10px;
+}
+
+/* Teks utama */
+.mvp-text {
+  color: white;
+  text-align: left;
+  margin-left: 100px;
+}
+
+.mvp-text .title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  text-align: left;
+
+}
+
+.mvp-text .player-name {
+  font-size: 3rem;
+  color: red;
+  margin-bottom: 20px;
+}
+
+/* Statistik */
+.mvp-stats {
+  display: flex;
+  gap: 200px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2rem;
+  margin: 0;
+  text-align: left;
+  width: 20px;
+}
+
+.stat-item p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5px 0;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  width: 60px;
+  margin-bottom: 30px;
+}
+
+
+  /* Berita Section */
+  .card-berita-title button{
+    background-color: #000;
+    color: #fff;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5%;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+  }
+
+  
+  .card-berita-desc button{
+    background-color: #000;
+    color: #fff;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5%;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+  }
+  
+  .berita {
+    padding: 20px;
+  }
+  .berita-header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .berita-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.plus{
+  width: 50px; /* Lebar tombol */
+  height: 50px; /* Tinggi tombol */
+  border-radius: 50%; /* Membuat tombol menjadi bulat */
+  background-color: #000; /* Warna latar belakang tombol */
+  color: white; /* Warna teks */
+  border: none; /* Menghilangkan border */
+  display: flex; /* Untuk memposisikan teks */
+  align-items: center; /* Vertikal tengah */
+  justify-content: center; /* Horizontal tengah */
+  cursor: pointer; /* Mengubah cursor menjadi pointer */
+
+}
+
+.plus button{
+  background-color: #000;
+  color: #fff;
+  border: none;
+  margin: auto;
+  font-weight: 700;
+  cursor: pointer;
+
+}
+
+.plus button i {
+  font-size: 24px;
+}
+
+
+.form-container {
+  position: fixed;
+  top:60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 8px;
+  margin-left: 400px;
+}
+
+.form-container button#closeFormBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-container input[type="file"],
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  padding: 4px;
+}
+.form-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.date-inputs input {
+  flex: 1;
+  text-align: center;
+}
+
+/* Scrollbar Styling */
+.berita-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.berita-container::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+.berita-container::-webkit-scrollbar-thumb:hover {
+  background: #f0f0f0;
+
+}
+/* .berita-container::-webkit-scrollbar-thumb {
+  background-color: #007bff; 
+  border-radius: 10px; 
+  border: 2px solid #f0f0f0;
+} */
+/* 
+.berita-container::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3; 
+} */
+
+/* .card-berita {
+    min-width: 200px;
+    flex: 0 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+.plus{
+    width: 50px; /* Lebar tombol */
+    height: 50px; /* Tinggi tombol */
+    border-radius: 50%; /* Membuat tombol menjadi bulat */
+    background-color: #000; /* Warna latar belakang tombol */
+    color: white; /* Warna teks */
+    border: none; /* Menghilangkan border */
+    display: flex; /* Untuk memposisikan teks */
+    align-items: center; /* Vertikal tengah */
+    justify-content: center; /* Horizontal tengah */
+    cursor: pointer; /* Mengubah cursor menjadi pointer */
+}
+
+.plus button{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    margin: auto;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.plus button i {
+    font-size: 24px;
+}
+
+.form-container {
+  position: fixed;
+  top:60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 8px;
+  margin-left: 400px;
+}
+
+.form-container button#closeFormBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-container input[type="file"],
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  padding: 4px;
+}
+.form-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.date-inputs input {
+  flex: 1;
+  text-align: center;
+}
+.card-berita {
+  display: flex;
+  flex-direction: column; /* Gambar dan teks ditata secara vertikal */
+  width: 100%; /* Mengatur lebar card sesuai dengan kontainer induknya */
+  max-width: 400px; /* Maksimal lebar 400px, bisa disesuaikan */
+  flex: 0 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-berita img {
+    width: 400px;
+    height: 300px;
+}
+
+.card-berita-title, .card-berita-desc {
+    font-family: "bebas neue";
+    text-align: left;
+    margin-left: 10px;
+  }
+  .card-berita-title {
+    color: red;
+    font-size: 20px;
+  }
+  
+  .card-berita-desc p {
+    color: #004170;
+  }
+
+.card-link {
+  text-decoration: none; /* Menghapus garis bawah */
+  color: inherit; /* Menjaga warna teks tetap sesuai desain */
+}
+
+.card-berita:hover {
+  transform: scale(1.05); /* Menambahkan sedikit efek zoom saat hover */
+  transition: transform 0.3s ease;
+}
+
+
+.btn-carousel {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-carousel button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-carousel button:hover {
+    background-color: #444;
+}
+
+  
+  /* Gallery Section */
+  .gallery {
+    padding: 20px;
+  }
+  .gallery-title{
+    background-color: #000;
+    width: 20%;
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    letter-spacing: 10px;
+    padding-top: 15px;
+    color: #fff;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  }
+  .card-galery{
+    margin-top: 20px;
+  }
+  .card-galery img{
+    width: 400px;
+    height: 300px;
+  }
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .gallery-item {
+    flex: 1;
+    text-align: center;
+  }
+
+  .form-containerGallery {
+    position: fixed;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+    margin-left: 400px;
+  }
+  
+  .form-containerGallery button#closeFormBtnGallery {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .form-containerGallery input[type="file"],
+  .form-containerGallery input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-containerGallery button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .form-containerGallery button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+
+  .form-containerHighlight {
+    position: fixed;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+    margin-left: 400px;
+  }
+  
+  .form-containerHighlight button#closeFormBtnHighlight {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .form-containerHighlight input[type="file"],
+  .form-containerHighlight input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-containerHighlight button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .form-containerHighlight button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Highlight Section */
+  .highlights {
+    padding: 20px;
+  }
+  .highlights-title{
+    background-color: #000;
+    width: 25%;
+    text-align: center;
+    height: 40px;
+    margin: auto;
+    letter-spacing: 10px;
+    padding-top: 15px;
+    color: #fff;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  }
+
+  .highlights-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    gap: 20px;
+    /* max-width: 1200px;  */
+    margin: 20px; /* Center-align */
+  }
+  
+  .card-highlights {
+    width: auto; /* Sesuaikan dengan kolom grid */
+    height: auto;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-highlights img {
+    width: 100%;
+    height: auto; /* Pastikan gambar tetap proporsional */
+  }
+  
+
+  .highlights-item {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  
+  .footer-content {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+.footer-content ul li a:hover {
+  color: #007bff; /* Warna saat hover */
+}
+/* Styling khusus untuk Tentang Kami */
+.footer-tentang-kami {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-content > div:last-child ul {
+  display: flex; /* Susun ikon secara horizontal */
+  justify-content: center; /* Pusatkan ikon */
+  gap: 15px; /* Jarak antar ikon */
+
+}
+
+.footer-content > div:last-child ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  left: 100%;
+  border-radius: 50%;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.footer-content > div:last-child ul li a:hover {
+  background-color: #e0e0e0; /* Warna latar saat hover */
+  color: #007bff; /* Warna ikon saat hover */
+
+}
+
+  
+  .footer-logo img {
+    width: 150px;
+    height: auto;
+  }
+
+ .logo-page{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 550px;
+  }
+
+  .plus button{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    margin: auto;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.plus button i {
+    font-size: 24px;
+}
+
+.form-container {
+  position: fixed;
+  top:60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 8px;
+  margin-left: 400px;
+}
+
+.form-container button#closeFormBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-container input[type="file"],
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"] {
+  margin-bottom: 16px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  padding: 4px;
+}
+.form-container button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.date-inputs input {
+  flex: 1;
+  text-align: center;
+}
