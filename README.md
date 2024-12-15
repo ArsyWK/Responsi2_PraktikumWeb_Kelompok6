@@ -24,7 +24,7 @@ Fitur-fitur yang disebutkan didukung oleh fitur sign in dan register akun yang d
 
 ##  File Proyek
 ```
-PSG/
+Responsi2_PraktikumWeb_kelompok6/
 |── admin panel/        # Pengelolaan laman admin
 ├── img/                # File berisi foto-foto
 ├── video/              # File berisi video 
